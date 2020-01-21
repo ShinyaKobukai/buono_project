@@ -1,0 +1,152 @@
+h1 {
+	border-bottom: double 6px #FF8000;
+}
+
+body {
+	background-color: #fbca4d;
+}
+
+label {
+	display: block;
+	margin-top: 20px;
+}
+
+input {
+	border-radius: 1.5rem;
+}
+
+.name img{
+	object-position:;
+	border-radius: 100rem;
+	width: 50px;
+ 	height: 50px;
+ 	object-fit: cover;
+}
+
+#TimeLine{
+	margin-left: 2.5rem;
+	margin-right: 2.5rem;
+	margin-top: 2rem;
+	flex-direction: row;
+}
+
+#Post_content{
+	/*background-color: #FFFFF9;*/
+	border-radius: 0.5rem;
+}
+
+.icon{
+	font-size: 20px;
+}
+
+.name{
+	background-color: #CCFFCC;
+	border-radius: 0.5rem;
+	margin-top: 1rem;/*
+	align-content: stretch;*/
+	align-items: baseline;
+	flex-direction: row;
+}
+
+.content_photo{
+	background-color: #FFCC99;
+	border-radius: 0.5rem;
+	width: 100%;
+}
+
+
+.info{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	min-height: 30px;
+	height: 100%;
+	width: 100%;
+}
+
+.food_name{
+	grid-col: 1/2;
+	grid-row: 1/3;
+	background-color: #66CC00;
+	border-radius: 0.5rem;
+	min-height: 15px;
+	height: 100%;
+	width: 100%;
+}
+
+.place{
+	grid-col: 2/3;
+	grid-row: 1/2;
+	background-color: #CC00FF;
+	border-radius: 0.5rem;
+	min-height: 15px;
+	height: 100%;
+	width: 100%;
+}
+
+.date{
+	grid-col: 2/3;
+	grid-row: 2/3;
+	background-color: #9999FF;
+	border-radius: 0.5rem;
+	height: 100%;
+	width: 100%;
+}
+
+.content{
+	background-color: #FFFF99;
+	border-radius: 0.5rem;
+	width: 100%;
+	height: 70px;
+}
+
+.hash{
+	background-color: #FFFF;
+	border-radius: 0.5rem;
+}
+
+.button{
+	display: flex;
+	background-color: #FFFF;
+}
+
+.edit{
+ 	display: inline-block;
+ 	padding: 0.3em 1em;
+ 	text-decoration: none;
+ 	color: #67c5ff;
+ 	border: solid 2px #67c5ff;
+ 	border-radius: 3px;
+ 	transition: .4s;
+ 	width: 50%;
+ 	height: 30px;
+}
+
+.edit:hover{
+  background: #67c5ff;
+  color: white;
+}
+
+.delete{
+	display: inline-block;
+	padding: 0.3em 1em;
+	text-decoration: none;
+	color: #67c5ff;
+	border: solid 2px #67c5ff;
+	border-radius: 3px;
+	transition: .4s;
+	width: 50%;
+ 	height: 30px;
+}
+
+.delete:hover{
+  background: #67c5ff;
+  color: white;
+}
+
+/* PC用レイアウト */
+@media screen and ( min-width : 769px ) {
+	.icon{
+		font-size: 30px;
+	}
+}
