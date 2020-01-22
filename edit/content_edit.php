@@ -53,7 +53,7 @@
             post_edit.trim();
             alert('編集が完了しました。'+post_edit);
             if (window.confirm("ポストリストに戻りますか？")) { 
-              var pram = "/buono/edit/edit_result.php?post_id="+post_id+"&amp;post_edit="+post_edit;
+              var pram = "/buono/edit/edit_result.php?post_id="+post_id+"&post_edit="+post_edit;
               location.href = pram;
             }
             console.log(post_edit);
