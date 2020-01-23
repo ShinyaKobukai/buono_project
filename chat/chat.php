@@ -9,16 +9,16 @@
 		include_once("../common/db_connect.php");
   	$pdo = db_connect();
 		$sql = '
-			SELECT
+			SELECT 
 			chat_post.message_id,
 			chat_post.user_id,
 			chat_post.message,
 			chat_post.post_time,
 			user.user_name
-			FROM
+			FROM 
 			chat_post left outer join user on
-			user.user_id=chat_post.user_id
-			WHERE
+			user.user_id=chat_post.user_id 
+			WHERE 
 			chat_post.room_id=?';
 		$stmt = $pdo->prepare($sql);
 		$stmt->execute(array($room_id));
@@ -61,18 +61,17 @@
   <header>
     <nav id="menu">
       <ul>
-        <li><a href="../index.php"><i class="fas fa-home"></i>Home</a></li>
-        <li><a href="../login/register.html"><i class="fas fa-user"></i>Register</a></li>
+        <li><a href="../home.html"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="../login/register.html"><i class="fas fa-user"></i>Legister</a></li>
         <li><a href="../login/login.html"><i class="fas fa-sign-in-alt"></i>Login</a></li>
         <li><a href="../edit/profile_edit.html"><i class="fas fa-user-cog"></i>Edit</a></li>
-        <li><a href="../post_list.php"><i class="far fa-comments"></i>Post</a></li>
-				<li><a href="search/search_form.html">検索</a></li>
+        <li><a href="../post_list.php"><i class="far fa-comments"></i>Posts</a></li>
       </ul>
     </nav>
   </header>
 <main>
 	<div>
-
+		
 		<div><a href="message_list.php"><img src="" alt="メッセージ一覧に戻る" /></a></div>
 		<div class="c_name"><?php print($user_id."のチャットルーム") ?></div>
 	</div>
