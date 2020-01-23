@@ -40,7 +40,6 @@
       <ul>
         <li><a href="../index.php"><i class="fas fa-home"></i>Home</a></li>
         <li><a href="../post_list.php"><i class="far fa-comments"></i>Post</a>
-        <li><a href=""><i class="fas fa-search"></i>Search</a></li>
         <li><a href="../login/logout.php"><i class="fas fa-sign-in-alt"></i><span>Logout</span></a></li>
       </ul>
     </nav>
