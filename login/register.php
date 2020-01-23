@@ -1,5 +1,5 @@
 <?php 
-  include("../common/fanction.php");
+  include("../common/function.php");
 
  ?>
 <!DOCTYPE html>
