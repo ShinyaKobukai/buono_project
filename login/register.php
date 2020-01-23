@@ -37,7 +37,7 @@
 <main>
   <div class="regi_info">
     <h1>新規登録</h1>
-    <form action="register.php" method="POST" id = "form">
+    <form action="register_proce.php" method="POST" id = "form">
       <label for="box">ユーザーID</label>
       <input type="text" name="user_id" value="" id="box"/>
       <label for="user_name">ユーザー名</label>
