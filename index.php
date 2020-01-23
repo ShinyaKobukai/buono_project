@@ -30,7 +30,7 @@
 							<li><a href="login/logout.php"><i class="fas fa-sign-in-alt"></i> <span>Logout</span></a></li>
 							';
 			}else{
-				echo '<li><a href="login/login.html"><i class="fas fa-sign-in-alt"></i> <span>Rogin</span></a></li>';
+				echo '<li><a href="login/login.php"><i class="fas fa-sign-in-alt"></i> <span>Rogin</span></a></li>';
 			}
 		?>
 		</ul>
