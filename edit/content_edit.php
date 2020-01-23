@@ -33,16 +33,14 @@
     <h1>レビュー編集</h1>
     <form name="form1" method="post">
       <label for="box">review</label>
-      <textarea name="post_edit" cols="15" rows="4" id="post_edit" maxlength="20" placeholder=""><?php echo $content;?></textarea>
+      <textarea name="post_edit" cols="15" rows="4" id="post_edit" placeholder=""><?php echo $content;?></textarea>
       <p><input type="hidden" name="post_id" value="<?php echo $post_id;?>"></p>
       <input type="button" value="編集する" onclick="clickBtn();" />           
     </form>
   </div>
       <script type="text/javascript">
         var post_id = "<?php echo $post_id; ?>";
-        //post_id = post_id.split(",", -1);
         var post_edit = "<?php echo $content; ?>";
-        //content = content.split(",", -1);
         console.log(post_id);
         var clickBtn = function(){
           var post_edit = document.form1.post_edit.value;
@@ -51,8 +49,7 @@
             alert('記述に問題があります。訂正してください。');
           } else {
             post_edit.trim();
-            alert('編集が完了しました。'+post_edit);
-            if (window.confirm("ポストリストに戻りますか？")) { 
+            if (window.confirm("編集を完了しますか？\n"+post_edit)) { 
               var pram = "/buono/edit/edit_result.php?post_id="+post_id+"&post_edit="+post_edit;
               location.href = pram;
             }
