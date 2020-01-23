@@ -86,7 +86,7 @@
         }
       ?>
         <li><a href="post_list.php"><i class="far fa-comments"></i>Post</a></li>
-        <li><a id="search_button" type="button"><i class="fas fa-search"></i>Serch</a></li>
+        <li><a id="search_button" href="#"><i class="fas fa-search"></i>Search</a></li>
       </ul>
     </nav>
   </header>
