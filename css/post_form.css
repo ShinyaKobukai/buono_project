@@ -15,6 +15,7 @@ button{
 	right: 0;
 	position: fixed;
 	text-align: center;
+	cursor: pointer;
 }
 button > img{
 	margin:auto;
