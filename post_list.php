@@ -75,18 +75,18 @@
       <?php 
         if (isset($_SESSION['user_id'])) {
           echo '
-          <li><a href="edit/profile_edit.php"><i class="fas fa-user-cog"></i>プロフィール編集</a></li>
-          <li><a href="login/logout.php"><i class="fas fa-sign-out-alt"></i>ログアウト</a></li>
+          <li><a href="edit/profile_edit.php"><i class="fas fa-user-cog"></i>Profile</a></li>
+          <li><a href="login/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
           ';
         }elseif (!isset($_SESSION['user_id'])) {
           echo '
-          <li><a href="login/register.php"><i class="fas fa-user"></i>アカウント作成</a></li>
-          <li><a href="login/login.php"><i class="fas fa-sign-in-alt"></i>ログイン</a></li>
+          <li><a href="login/register.php"><i class="fas fa-user"></i>Register</a></li>
+          <li><a href="login/login.php"><i class="fas fa-sign-in-alt"></i>Login</a></li>
           ';
         }
       ?>
-        <li><a href="post_list.php"><i class="far fa-comments"></i>ポスト</a></li>
-        <li><a id="search_button" type="button"><i class="fas fa-search"></i>検索</a></li>
+        <li><a href="post_list.php"><i class="far fa-comments"></i>Post</a></li>
+        <li><a id="search_button" type="button"><i class="fas fa-search"></i>Serch</a></li>
       </ul>
     </nav>
   </header>
