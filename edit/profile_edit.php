@@ -22,7 +22,6 @@
     }
     $row = $sql->fetch();
     $user_name = $row['user_name'];
-    var_dump($user_name);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
