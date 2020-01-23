@@ -205,11 +205,24 @@
 
   <div id="search_form">
     <p id="top_form_ms">検索</p>
-    <form action="search/search_result.php" method="post">
-      <p><input type="text" name="food_name" placeholder="料理名かタグを入力してください" size="24" maxlength="20"></p>
-      <p><input type="submit" value="検索"></p>
+    <form action="search/search_result.php" name="form1" method="post">
+      <input type="text" name="food_name" placeholder="料理名かタグを入力してください" size="24" maxlength="20" id="food_name">
+      <input type="submit" value="検索" id="btn">
     </form>
   </div>
+  <script src="js/all.js"></script>
+  <script>
+  (function(){
+    document.querySelector('#btn').onclick = function(){
+      var food_name = document.form1.food_name.value;
+      document.querySelector('#food_name').textContent = food_name;
+      if (!food_name.match(/\S/g)){
+        alert('記述に問題があります。訂正してください。');
+        return false;
+      } 
+    }
+  })();
+  </script>
 </div>
 <!-- 　↑　 -->
   <footer>
@@ -219,6 +232,5 @@
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/post-form.js"></script>
   <script src="js/search-form.js"></script>
-  <script src="js/all.js"></script>
 </body>
 </html>
