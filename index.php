@@ -20,7 +20,7 @@
 	<nav id="menu">
 		<ul>
 			<li><a href="index.php"><i class="fas fa-home"></i> <span>Home</span></a></li>
-			<li><a href="login/register.html"><i class="fas fa-user"></i> <span>Register</span></a></li>
+			<li><a href="login/register.php"><i class="fas fa-user"></i> <span>Register</span></a></li>
 		<?php
 			//menu();
 			if(!empty($_SESSION['user_id'])){
@@ -30,7 +30,7 @@
 							<li><a href="login/logout.php"><i class="fas fa-sign-in-alt"></i> <span>Logout</span></a></li>
 							';
 			}else{
-				echo '<li><a href="login/login.php"><i class="fas fa-sign-in-alt"></i> <span>Rogin</span></a></li>';
+				echo '<li><a href="login/login.php"><i class="fas fa-sign-in-alt"></i> <span>Login</span></a></li>';
 			}
 		?>
 		</ul>
