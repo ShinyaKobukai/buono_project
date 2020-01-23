@@ -1,6 +1,6 @@
 <?php
 
-	include("function.php");
+	include("common/function.php");
 	//login_check();
 
 ?>
