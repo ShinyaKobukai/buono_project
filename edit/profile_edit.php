@@ -40,10 +40,10 @@
     <nav id="menu">
       <ul>
         <li><a href="../index.php"><i class="fas fa-home"></i>Home</a></li>
-        <li><a href="login/register.html"><i class="fas fa-user"></i>Register</a></li>
-        <li><a href="post_list.php"><i class="far fa-comments"></i>Post</a>
+        <li><a href="../login/register.html"><i class="fas fa-user"></i>Register</a></li>
+        <li><a href="../post_list.php"><i class="far fa-comments"></i>Post</a>
         <li><a href=""><i class="fas fa-search"></i>Search</a></li>
-        <li><a href="profile_edit.html"><i class="fas fa-user-cog"></i>Profile</a></li>
+        <li><a href="profile_edit.php"><i class="fas fa-user-cog"></i>Profile</a></li>
         <li><a href="../login/logout.php"><i class="fas fa-sign-in-alt"></i><span>Logout</span></a></li>
       </ul>
     </nav>
