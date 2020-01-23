@@ -5,6 +5,12 @@
     $login_user = $_SESSION['user_id'];
   }
 	$pdo = db_connect();
+	// $word = null;
+	// $word = $_POST['word'];
+	// if (empty($word)) {
+	// 	header('Location:../post_list.php');
+	// 	exit();
+	// }
 
 	if(empty($_POST['word']) == null){
 		$input = $_POST['word'];
@@ -62,7 +68,7 @@
         <li><a href="../index.php"><i class="fas fa-home"></i>Home</a></li>
         <li><a href="../login/register.php"><i class="fas fa-user"></i>Register</a></li>
         <li><a href="../post/post_list.php"><i class="far fa-comments"></i>Post</a>
-        <li><a id="search_button" type="button"><i class="fas fa-search"></i>Search</a></li>
+        <li><a id="search_button"><i class="fas fa-search"></i>Search</a></li>
         <li><a href="../edit/profile_edit.php"><i class="fas fa-user-cog"></i>Profile</a></li>
         <li><a href="../login/logout.php"><i class="fas fa-sign-in-alt"></i> <span>Logout</span></a></li>
       </ul>
