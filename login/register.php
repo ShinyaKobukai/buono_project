@@ -22,7 +22,6 @@
         //menu();
         if(!empty($_SESSION['user_id'])){
           echo '<li><a href="../post_list.php"><i class="far fa-comments"></i>Post</a></li>
-                <li><a href="../edit/profile_edit.php"><i class="fas fa-user-cog"></i>Profile</a></li>
                 <li><a href="logout.php"><i class="fas fa-sign-in-alt"></i> <span>Logout</span></a></li>
                 ';
         }else{
