@@ -18,12 +18,10 @@
     <nav id="menu">
       <ul>
         <li><a href="../index.php"><i class="fas fa-home"></i> <span>Home</span></a></li>
-        <li><a href="register_proce.php"><i class="fas fa-user"></i> <span>Register</span></a></li>
       <?php
         //menu();
         if(!empty($_SESSION['user_id'])){
           echo '<li><a href="../post_list.php"><i class="far fa-comments"></i>Post</a></li>
-                <li><a href="../search/search_form.html"><i class="fas fa-search"></i>Search</a></li>
                 <li><a href="../edit/profile_edit.php"><i class="fas fa-user-cog"></i>Profile</a></li>
                 <li><a href="logout.php"><i class="fas fa-sign-in-alt"></i> <span>Logout</span></a></li>
                 ';
