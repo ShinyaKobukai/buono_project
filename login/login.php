@@ -15,7 +15,7 @@
       <ul>
         <li><a href="../index.php"><i class="fas fa-home"></i>Home</a></li>
         <li><a href="register.php"><i class="fas fa-user"></i>Register</a></li>
-        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i>Rogin</a></li>
+        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i>Login</a></li>
       </ul>
     </nav>
   </header>
