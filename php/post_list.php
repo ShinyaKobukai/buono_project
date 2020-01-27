@@ -1,5 +1,5 @@
 <?php
-  include_once("common/db_connect.php");
+  include_once("../common/db_connect.php");
   session_start();
   if (isset($_SESSION['user_id'])) {
     $login_user = $_SESSION['user_id'];
@@ -58,7 +58,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="js/flickity.pkgd.min.js"></script>
+    <script src="../js/flickity.pkgd.min.js"></script>
     <link rel="stylesheet" href="../css/flickity.css">
     <link rel="stylesheet" href="../css/flickity.min.css">
     <link rel="stylesheet" href="../css/common.css" type="text/css">
