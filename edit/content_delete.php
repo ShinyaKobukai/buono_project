@@ -17,5 +17,5 @@
 	}catch(PDOException $e){
 		echo "えらー:" . $e->getMessage();
 	}
-	header("Location: ../post_list.php");
+	header("Location: ../php/post_list.php");
 ?>

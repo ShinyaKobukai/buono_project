@@ -21,7 +21,7 @@
 				$sql = "UPDATE user SET user_name = ? WHERE user_id = ?";
 				$sql = $pdo->prepare($sql);
 	    		$sql->execute(array($user_name,$user_id));
-				header('Location: ../post_list.php');
+				header('Location: ../php/post_list.php');
 				var_dump("名前だけ変更しました");
 				exit;
 			}
@@ -30,7 +30,7 @@
 				$sql = "UPDATE user SET user_name = ?, icon = ? WHERE user_id = ?";
 				$sql = $pdo->prepare($sql);
 	    		$sql->execute(array($user_name,$user_icon,$user_id));
-				header('Location: ../post_list.php');
+				header('Location: ../php/post_list.php');
 				var_dump("画像と名前を変更しました");
     			exit;
 			}
