@@ -66,7 +66,7 @@
       <?php 
         if (isset($_SESSION['user_id'])) {
           echo '
-          <li><a href="../edit/profile_edit.html"><i class="fas fa-user-cog"></i>Edit</a></li>
+          <li><a href="../edit/profile_edit.php"><i class="fas fa-user-cog"></i>Edit</a></li>
           <li><a href="../login/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
           ';
         }elseif (!isset($_SESSION['user_id'])) {
@@ -147,11 +147,11 @@
           if ($login_user == $row['user_id']) {
             echo 
               '<div class="button">
-                <div class="edit"><a href="edit/content_edit.php?content='.$row['content'].'&amp;post_id='.$row['post_id'].'" class="btn-flat-border">編集</a></div>
-                <div class="delete"><a href="edit/content_delete.php?post_id='.$row['post_id'].'">削除</a></div>
+                <div class="edit"><a href="../edit/content_edit.php?content='.$row['content'].'&amp;post_id='.$row['post_id'].'" class="btn-flat-border">編集</a></div>
+                <div class="delete"><a href="../edit/content_delete.php?post_id='.$row['post_id'].'">削除</a></div>
               </div>';
           }else{
-            echo '<div class="message"><a href="chat/chat_create.php?user_id='.$row['user_id'].'">DM</a></div>';
+            echo '<div class="message"><a href="../chat/chat_create.php?user_id='.$row['user_id'].'">DM</a></div>';
           }
         ?>
 			</div>
