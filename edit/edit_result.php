@@ -23,7 +23,7 @@
     );
     $user_stmt->execute();
 
-    header("Location: ../post_list.php");
+    header("Location: ../php/post_list.php");
     exit;
   } catch (PDOException $e) {
     exit('データベース接続失敗。'.$e->getMessage());
