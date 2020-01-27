@@ -15,12 +15,12 @@ button{
 	right: 0;
 	position: fixed;
 	text-align: center;
-	cursor: pointer;
 }
 button > img{
 	margin:auto;
 	width: 95%;
 	height: 95%;
+	cursor: pointer;
 }
 /*薄く黒色を重ねる*/
 #black-layer {

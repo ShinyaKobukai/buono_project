@@ -123,6 +123,7 @@ body {
 }
 
 
+
 /* PC用レイアウト */
 @media screen and ( min-width : 769px ) {
 
@@ -155,5 +156,14 @@ body {
 		height:40vh;
 	}
 
+	#title_pic {
+		width:15%;
+		height:15%;
+	}
+
+	#title {
+		width:25%;
+		height:25%;
+	}
 
 }/*media query end*/
