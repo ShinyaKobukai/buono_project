@@ -29,19 +29,24 @@
 
 		$post_id = $pdo->lastInsertId('post_id');
 
-		for ($i=0; $i<count($_FILES['photo']['tmp_name']); $i++) {
+		if (isset($_FILES['photo']['tmp_name'])) {
+			for ($i=0; $i<count($_FILES['photo']['tmp_name']); $i++) {
 			$data = file_get_contents($_FILES["photo"]["tmp_name"][$i]);
 			$data = str_replace("data:image/jpeg;base64,","",$data);
 			$data = base64_encode($data);
-			$photo_stmt = $pdo->prepare("
-			INSERT INTO photo_data (post_id,data)
-			VALUES (:post_id, :data)
-			");
+			if (!empty($data)) {
+				$photo_stmt = $pdo->prepare("
+				INSERT INTO photo_data (post_id,data)
+				VALUES (:post_id, :data)
+				");
+				$photo_stmt->bindParam(':post_id',$post_id,PDO::PARAM_INT);
+				$photo_stmt->bindParam(':data',$data,PDO::PARAM_STR);
+				$photo_stmt->execute();
+				}
 			//パラメータを割り当て
-			$photo_stmt->bindParam(':post_id',$post_id,PDO::PARAM_INT);
-			$photo_stmt->bindParam(':data',$data,PDO::PARAM_STR);
-			$photo_stmt->execute();
+			}
 		}
+
 		//contentに#があった際の処理
 		if(strpos($content,'#') !== false){
 			if(strpos($content,' ') !== false){
