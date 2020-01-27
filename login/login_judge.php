@@ -14,7 +14,6 @@
     $user_id = $_POST['user_id'];
     //print("loginに関するパラメータを受け取りました");
     $_SESSION['user_id'] = $user_id;
-    $_SESSION["correct"] = base64_encode($user_id);
 
     try{
       $sql = 'select count(*) from user where user_id=? and password=?';
@@ -25,7 +24,7 @@
       $pdo = null;
 
       if($result[0] != 0){
-        header('Location: ../post_list.php');
+        header('Location: ../php/post_list.php');
         exit;
       } else {
         // 読み込んだときに自動的にポップアップの内容が書いたformを送信する

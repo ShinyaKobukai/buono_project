@@ -2,7 +2,7 @@
   session_start();
   if (isset($_SESSION['user_id'])) {
     $_SESSION = array();
-    header("Location: ../index.php");
+    header("Location: ../php/index.php");
     exit;
   }
 ?>
