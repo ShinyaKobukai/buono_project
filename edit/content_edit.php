@@ -20,9 +20,9 @@
   <header>
     <nav id="menu">
       <ul>
-        <li><a href="../home.html"><i class="fas fa-home"></i>Home</a></li>
-        <li><a href="../register.html"><i class="fas fa-user"></i>Register</a></li>
-        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+        <li><a href="../index.php"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="../register.php"><i class="fas fa-user"></i>Register</a></li>
+        <li><a href="login.php"><i class="fas fa-sign-in-alt"></i>Login</a></li>
         <li><a href="profile_edit.php"><i class="fas fa-user-cog"></i>Profile</a></li>
         <li><a href="../post_list.php"><i class="far fa-comments"></i>Post</a></li>
       </ul>
@@ -50,7 +50,7 @@
           } else {
             post_edit.trim();
             if (window.confirm("編集を完了しますか？\n"+post_edit)) { 
-              var pram = "/buono/edit/edit_result.php?post_id="+post_id+"&post_edit="+post_edit;
+              var pram = "edit_result.php?post_id="+post_id+"&post_edit="+post_edit;
               location.href = pram;
             }
             console.log(post_edit);
