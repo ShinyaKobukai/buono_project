@@ -119,6 +119,7 @@ input {
 	display: flex;
 	border-radius: 5px;
 	cursor: pointer;
+	justify-content: center;
 }
 
 .content{
