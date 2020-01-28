@@ -71,12 +71,12 @@
           ';
         }elseif (!isset($_SESSION['user_id'])) {
           echo '
-          <li><a href="../register/register.html"><i class="fas fa-user"></i>Register</a></li>
+          <li><a href="../register/register.php"><i class="fas fa-user"></i>Register</a></li>
           <li><a href="../login/login.php"><i class="fas fa-sign-in-alt"></i>Login</a></li>
           ';
         }
       ?>
-        <li><a href="../post/post_list.php"><i class="far fa-comments"></i>Post</a></li>
+        <li><a href="../php/post_list.php"><i class="far fa-comments"></i>Post</a></li>
         <li><a id="search_button" href="#"><i class="fas fa-search"></i>Search</a></li></li>
       </ul>
     </nav>
