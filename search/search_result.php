@@ -71,7 +71,7 @@
           ';
         }elseif (!isset($_SESSION['user_id'])) {
           echo '
-          <li><a href="../login/register.html"><i class="fas fa-user"></i>Register</a></li>
+          <li><a href="../register/register.html"><i class="fas fa-user"></i>Register</a></li>
           <li><a href="../login/login.php"><i class="fas fa-sign-in-alt"></i>Login</a></li>
           ';
         }
