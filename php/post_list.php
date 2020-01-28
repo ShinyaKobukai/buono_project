@@ -179,7 +179,7 @@
 </main>
 <div id="post_button">
   <button>
-    <i class="fas fa-pen" style="skyblue";></i>
+    <i class="fas fa-pen"></i>
   </button>
 </div>
 <div id="black-layer"></div>
