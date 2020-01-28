@@ -48,8 +48,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<script src="../js/flickity.pkgd.min.js"></script>
-	<link rel="icon" href="../img/favicon.ico">
+       <script src="../js/flickity.pkgd.min.js"></script>
     <link rel="stylesheet" href="../css/flickity.css">
     <link rel="stylesheet" href="../css/flickity.min.css">
     <link rel="stylesheet" href="../css/common.css" type="text/css">
@@ -148,11 +147,11 @@
           if ($login_user == $row['user_id']) {
             echo 
               '<div class="button">
-                <div class="edit"><a href="../edit/content_edit.php?content='.$row['content'].'&amp;post_id='.$row['post_id'].'" class="btn-flat-border">編集</a></div>
-                <div class="delete"><a href="../edit/content_delete.php?post_id='.$row['post_id'].'">削除</a></div>
+                <div class="edit"><a href="/buono/edit/content_edit.php?content='.$row['content'].'&amp;post_id='.$row['post_id'].'" class="btn-flat-border">編集</a></div>
+                <div class="delete"><a href="edit/content_delete.php?post_id='.$row['post_id'].'">削除</a></div>
               </div>';
           }else{
-            echo '<div class="message"><a href="../chat/chat_create.php?user_id='.$row['user_id'].'">DM</a></div>';
+            echo '<div class="message"><a href="chat/chat_create.php?user_id='.$row['user_id'].'">DM</a></div>';
           }
         ?>
 			</div>
