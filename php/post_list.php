@@ -90,7 +90,9 @@
         <?php 
           if(empty($row['content']) == null){
             echo '<div class="icon">
-                    <img src="data:image/jpg;base64,' . $row['icon'] . ' ">
+                    <div class="icon_img">
+                      <img src="data:image/jpg;base64,' . $row['icon'] . ' ">
+                    </div>
                     <div class="icon_name"> '.$row['user_name'].'</div>
                   </div>';
           }
