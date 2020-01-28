@@ -71,7 +71,7 @@
 				}
 			}//--if
 		}//--if
-		header('Location: ../post_list.php');
+		header('Location: post_list.php');
 	}catch(PDOEXception $e){
 		die('エラー：'.$e->getMessage());
 	}
