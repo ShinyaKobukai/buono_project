@@ -17,11 +17,12 @@ input {
 
 .icon{
 	display: flex;
+    justify-content: center; 
+    align-items: center;
 }
 
 .icon_name{
 	font-size: 30px;
-	margin-top: 15px;
 	position: center;
 	left: 30px;
 }
