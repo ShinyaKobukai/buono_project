@@ -22,7 +22,7 @@
       <ul>
         <li><a href="../index.php"><i class="fas fa-home"></i>Home</a></li>
         <li><a href="../register/register.php"><i class="fas fa-user"></i>Register</a></li>
-        <li><a href="../login/login.html"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+        <li><a href="../login/login.php"><i class="fas fa-sign-in-alt"></i>Login</a></li>
         <li><a href="profile_edit.php"><i class="fas fa-user-cog"></i>Profile</a></li>
         <li><a href="../php/post_list.php"><i class="far fa-comments"></i>Post</a></li>
       </ul>
@@ -61,6 +61,7 @@
   <footer>
     <address>&copy;2019 buono All Rights Reserved.</address>
   </footer>
+  <script src="../js/all.js"></script>
 </body>
 </html>
 
