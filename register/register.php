@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="../css/common.css" type="text/css">
     <link rel="stylesheet" href="../css/register.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
@@ -22,7 +23,7 @@
         //menu();
         if(!empty($_SESSION['user_id'])){
           echo '<li><a href="../php/post_list.php"><i class="far fa-comments"></i>Post</a></li>
-                <li><a href="logout.php"><i class="fas fa-sign-in-alt"></i> <span>Logout</span></a></li>
+                <li><a href="../login/logout.php"><i class="fas fa-sign-in-alt"></i> <span>Logout</span></a></li>
                 ';
         }else{
           echo '<li><a href="login.php"><i class="fas fa-sign-in-alt"></i> <span>Login</span></a></li>';
