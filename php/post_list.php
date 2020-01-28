@@ -179,7 +179,7 @@
 </main>
 <div id="post_button">
   <button>
-    <img src="img/post_icon.png" id="open" alt="ボタン" />
+    <i class="fas fa-pen" style="skyblue";></i>
   </button>
 </div>
 <div id="black-layer"></div>
