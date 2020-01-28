@@ -59,7 +59,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="../js/flickity.pkgd.min.js"></script>
-    <link rel="icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="../css/flickity.css">
     <link rel="stylesheet" href="../css/flickity.min.css">
     <link rel="stylesheet" href="../css/common.css" type="text/css">
@@ -76,7 +75,7 @@
         <li><a href="../index.php"><i class="fas fa-home"></i>Home</a></li>
         <li><a id="search_button" href="#"><i class="fas fa-search"></i>Search</a></li>
         <li><a href="../edit/profile_edit.php"><i class="fas fa-user-cog"></i>Profile</a></li>
-        <li><a href="../login/logout.php"><i class="fas fa-sign-in-alt"></i> <span>Logout</span></a></li>
+        <li><a href="../login/logout.php"><i class="fas fa-sign-in-alt"></i><span>Logout</span></a></li>
       </ul>
     </nav>
   </header>
@@ -145,8 +144,9 @@
             echo 
               '<div class="button">
                 <div class="edit"><a href="../edit/content_edit.php?content='.$row['content'].'&amp;post_id='.$row['post_id'].'" class="btn-flat-border">編集</a></div>
-                <div class="delete"><a href="../edit/content_delete.php?post_id='.$row['post_id'].'">削除</a></div>
+                <div class="delete"><a href="#" id="del">削除</a></div>
               </div>';
+              $del_url = '../edit/content_delete.php?post_id='.$row['post_id'];
           }else{
             echo '<div class="message"><a href="../chat/chat_create.php?user_id='.$row['user_id'].'">DM</a></div>';
           }
@@ -226,6 +226,19 @@
       } 
     }
   })();
+
+  (function(){
+    document.querySelector('#del').onclick = function(){
+      var del_bt = confirm('削除しますか？');
+      del_url = "<?php echo $del_url; ?>";
+        if (del_bt && del_url != null) {
+          location.href=del_url; 
+        } else {
+          return false;
+        }
+      } 
+  })();
+
   </script>
 </div>
 <!-- 　↑　 -->
