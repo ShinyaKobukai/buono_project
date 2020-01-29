@@ -31,34 +31,33 @@
   text-align: left;
 }
 .no {
+  margin:0;
+}
+.no p {
   display: inline-block;
   position: relative; 
-  margin: 0 0 0 50px;
-  padding: 10px;
+  margin: 0 0 0;
+  padding: 8px;
   max-width: 250px;
   border-radius: 12px;
-  background: #edf1ee;
+  background: #ccc;
+  font-size: 15px:
 }
-
-.no:after {
+.no p:after {
   content: "";
   display: inline-block;
   position: absolute;
   top: 3px; 
   left: -19px;
   border: 8px solid transparent;
-  border-right: 18px solid #edf1ee;
+  border-right: 18px solid #ccc;
   -webkit-transform: rotate(35deg);
   transform: rotate(35deg);
-}
-.no p {
-  margin: 0;
-  padding: 0;
 }
 
 /*以下、③右側の緑コメント*/
 .own {
-  margin: 10px 0;
+  margin: 0;
 }
 .own p {
   display: inline-block;
@@ -73,6 +72,7 @@
 
 .own p:after {
   content: "";
+  display: inline-block;
   position: absolute;
   top: 3px; 
   right: -19px;

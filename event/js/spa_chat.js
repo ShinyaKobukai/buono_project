@@ -46,14 +46,14 @@ document.addEventListener('DOMContentLoaded',e=>{
 			li.innerHTML = 
 `
 	<div class="chat">
-		<div class="info">
 
+		<div class="name ${cssown}">${user_id}</div>
+		
+		<div class="info ${cssown}">
 			<div class="${cssown}">
 				<p>${message}</p>
 			</div><!-- /.message -->
 		</div><!-- /.info -->
-
-
 
 	</div><!-- /.chat -->
 `;

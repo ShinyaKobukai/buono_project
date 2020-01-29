@@ -117,19 +117,31 @@ footer{
 	border:none;
 	border-radius:1rem;
 	width:100%;
-	min-width:32rem;
+	min-width:16rem;
 	max-width:96rem;
 	color:#000;
-	background-color:#fff;
-	box-shadow:0 0 .3rem #ccc;
+	/*background-color:#fff;*/
+	/*box-shadow:0 0 .3rem #ccc;*/
 	word-break: break-all;
 }
-.info{
+.info.own{
 	display:flex;
+	justify-content:flex-end;
+}
+.info.no{
+	display:flex;
+	justify-content:flex-start;
+}
+.name.own{
+	display:flex;
+	justify-content:flex-end;
+}
+.name.no{
+	display:flex;
+	justify-content:flex-start;
 }
 .info span{
 	display:block;
-	
 }
 .postid{
 	width:30%;
