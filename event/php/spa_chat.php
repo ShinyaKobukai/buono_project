@@ -1,6 +1,7 @@
 <?php
 session_start();
 // include("user_check.php");
+$_SESSION['correct'] = base64_encode($_SESSION['user_id']);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -13,6 +14,7 @@ session_start();
 </head>
 <body data-owner="<?php echo $_SESSION["correct"];?>">
 <div id="wrapper">
+	<a href="../../chat/message_list.php">戻る</a>
 	<h1 class="theme"></h1>
 	<ul id="sample"></ul>
 	<footer>
