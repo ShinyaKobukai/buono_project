@@ -16,12 +16,20 @@ button{
 	position: fixed;
 	text-align: center;
 }
+
+button:hover{
+	background-color: #fff;
+	border-color: #59b1eb;
+	color: #59b1eb;
+}
+
 button > img{
 	margin:auto;
 	width: 95%;
 	height: 95%;
 	cursor: pointer;
 }
+
 /*薄く黒色を重ねる*/
 #black-layer {
   position: fixed;

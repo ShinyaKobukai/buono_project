@@ -24,3 +24,17 @@ input {
 	border-radius: 0.5rem;
 	background-color: white;
 }
+
+#ans{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#yesref{
+	padding: 10px;
+}
+
+#noref{
+	padding: 10px;
+}
