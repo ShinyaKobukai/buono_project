@@ -10,7 +10,7 @@ $_SESSION['correct'] = base64_encode($_SESSION['user_id']);
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 	<title>チャットルーム</title>
 	<link rel="stylesheet" href="../css/user_chat.css" />
-	<link rel="stylesheet" href="../../css/chat1.css" />
+	<link rel="stylesheet" href="../css/chat1.css" />
 </head>
 <body data-owner="<?php echo $_SESSION["correct"];?>">
 <div id="wrapper">
