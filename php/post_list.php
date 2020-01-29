@@ -147,7 +147,7 @@
             echo 
               '<div class="button">
                 <div class="edit"><a href="/buono/edit/content_edit.php?content='.$row['content'].'&amp;post_id='.$row['post_id'].'" class="btn-flat-border">編集</a></div>
-                <div class="delete"><a href="#!" id="del">削除</a></div>
+                <div class="delete"><a href="#!" class="del" id="del">削除</a></div>
               </div>';
           }else{
             echo '<div class="message"><a href="../chat/chat_create.php?user_id='.$row['user_id'].'">DM</a></div>';
@@ -192,22 +192,33 @@
       <p id="top_form">投稿</p>
       <form action="post_write.php" enctype="multipart/form-data" method="post">
           <p><input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id'];?>"></p></br>
-          <p><i class="fas fa-utensils"></i><input type="text" name="food_name" placeholder="メニューの名前を入力してください（必須）" size="20" maxlength="20"></p> 
-        </div>
-          <div id ="review">  
-            <p><i class="fas fa-comment"></i><textarea name="content" placeholder="感想を入力してください（必須）" rows="4" cols="17"></textarea></p>
+          <div id="food_space">
+            <div id="food_icon"><i class="fas fa-utensils"></i></div>
+            <div id="food_text">
+              <input type="text" name="food_name" placeholder="メニュー名（必須）50文字以内" maxlength="50" size="21">
+            </div>
           </div>
-          <p><i class="fas fa-location-arrow"></i><input type="text" name="place" placeholder="場所を入力してください（任意）" size="20" maxlength="20"></p> 
+          <div id ="content_space">  
+            <div id="content_icon"><i class="fas fa-comment"></i></div>
+            <div id="content_text">
+              <textarea name="content" placeholder="感想（必須）500文字以内" rows="4" cols="17" maxlength="500"></textarea>
+            </div>
+          </div>
+          <div id="place_space">
+            <div id="place_icon"><i class="fas fa-location-arrow"></i></div>
+            <div id="place_text">
+              <input type="text" name="place" placeholder="場所（任意）50文字以内" maxlength="50" size="21"> 
+            </div>
+          </div>
           <div id ="write">
-              <p><input type="file" name="photo[]" id="photo" multiple="multiple" accept="image/jpeg,*.jpg" /></p>
-              <input type="hidden" id="base64" name="date" value="" />
-              <p><input type="submit" value="投稿する"></p></br>
-          </div>  
-        </div>
+            <input type="file" name="photo[]" id="photo" multiple="multiple" accept="image/jpeg,*.jpg">
+            <input type="hidden" id="base64" name="date" value="">
+            <input type="submit" value="投稿する"></br>
+          </div> 
       </form> 
+    </div>
   </div>
 </div>
-
 <!-- ↓追加 -->
 <div id="flex-area-s">
   <div id="search_form">
@@ -230,7 +241,9 @@
   })();
 
   (function(){
-    document.querySelector('#del').onclick = function(){
+    let cdel = document.querySelectorAll('.del');
+    for(let i=0; i<cdel.length; i++){
+      cdel[i].onclick = function(){
       var del_bt = confirm('削除しますか？');
       del_url = "<?php echo $del_url; ?>";
         if (del_bt && del_url != null) {
@@ -238,7 +251,8 @@
         } else {
           return false;
         }
-      } 
+      }
+    }
   })();
 
   </script>
