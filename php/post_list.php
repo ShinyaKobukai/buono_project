@@ -84,7 +84,7 @@
   while ($row = $user_stmt->fetch()):
     $food_name = $row['food_name'] ? $row['food_name'] : '(無題)';
 ?>
-    <div id="TimeLine">     
+    <div id="TimeLine" class="element js-animation">     
       <div id="Post_content">
       <div class="name" >
         <?php 
@@ -143,11 +143,11 @@
           } 
           //ログインの中ユーザーのみ削除と編集のボタンを出す
           if ($login_user == $row['user_id']) {
-            $del_url = '../edit/content_delete.php?post_id='.$row['post_id'];
+            $del_url = '../edit/check_delete.php?content='.$row['content'].'&amp;post_id='.$row['post_id'];
             echo 
               '<div class="button">
                 <div class="edit"><a href="/buono/edit/content_edit.php?content='.$row['content'].'&amp;post_id='.$row['post_id'].'" class="btn-flat-border">編集</a></div>
-                <div class="delete"><a href="#!" class="del" id="del">削除</a></div>
+                <div class="delete"><a href="'.$del_url.'" class="del" id="del">削除</a></div>
               </div>';
           }else{
             echo '<div class="message"><a href="../chat/chat_create.php?user_id='.$row['user_id'].'">DM</a></div>';
@@ -229,6 +229,7 @@
     </form>
   </div>
   <script>
+  //記述の問題のアラート
   (function(){
     document.querySelector('#btn').onclick = function(){
       var food_name = document.form1.food_name.value;
@@ -239,21 +240,43 @@
       } 
     }
   })();
-
-  (function(){
-    let cdel = document.querySelectorAll('.del');
-    for(let i=0; i<cdel.length; i++){
-      cdel[i].onclick = function(){
-      var del_bt = confirm('削除しますか？');
-      del_url = "<?php echo $del_url; ?>";
-        if (del_bt && del_url != null) {
-          location.href=del_url; 
-        } else {
-          return false;
+  //アニメーション
+    (function(){
+      function showElementAnimation() {
+        var element = document.getElementsByClassName('js-animation');
+        if(!element) return; // 要素がなかったら処理をキャンセル      
+        var showTiming = window.innerHeight > 768 ? 200 : 40; // 要素が出てくるタイミングはここで調整
+        var scrollY = window.pageYOffset;
+        var windowH = window.innerHeight;
+      for(var i=0;i<element.length;i++) { 
+        var elemClientRect = element[i].getBoundingClientRect(); var elemY = scrollY + elemClientRect.top; if(scrollY + windowH - showTiming > elemY) {
+          element[i].classList.add('is-show');
+        } else if(scrollY + windowH < elemY) {
+          // 上にスクロールして再度非表示にする場合はこちらを記述
+          element[i].classList.remove('is-show');
         }
       }
     }
+    showElementAnimation();
+    window.addEventListener('scroll', showElementAnimation);
   })();
+  //削除時のアラート
+  // (function(){
+  //   let cdel = null;
+  //   cdel = document.querySelectorAll('.del');
+  //   for(let i=0; i<cdel.length; i++){
+  //     cdel[i].onclick = function(){
+  //     var del_bt = confirm('削除しますか？');
+  //     del_url = "";
+  //       if (del_bt && del_url != null) {
+  //         location.href=del_url; 
+  //       } else {
+  //         return false;
+  //       }
+  //     }
+  //   }
+  // })();
+
 
   </script>
 </div>
