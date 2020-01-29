@@ -12,7 +12,7 @@ label {
 }
 
 input {
-	border-radius: 1.5rem;
+	/*border-radius: 1.5rem;*/
 }
 
 .icon{
@@ -79,7 +79,7 @@ input {
 }
 
 #photo {
-	border-radius: 40px;
+	/*border-radius: 40px;*/
 }
 
 #result{
@@ -184,4 +184,52 @@ input {
 	.icon{
 		font-size: 30px;
 	}
+}
+
+/*投稿フォームのCSS*/
+
+#food_space{
+	display: flex;
+	align-items: center;
+}
+
+#food_icon{
+	padding: 10px;
+	font-size: 20px;
+	width: 25px;
+}
+
+#food_text{
+	width: 250px;
+}
+
+#content_space{
+	display: flex;
+	align-items: center;
+}
+
+
+#content_icon{
+	padding: 10px;
+	font-size: 20px;
+	width: 25px;
+}
+
+#content_text{
+	width: 250px;
+}
+
+#place_space{
+	display: flex;
+	align-items: center;
+}
+
+#place_icon{
+	padding: 10px;
+	font-size: 20px;
+	width: 25px;
+}
+
+#place_text{
+	width: 250px;
 }
