@@ -61,6 +61,7 @@
   <footer>
     <address>&copy;2019 buono All Rights Reserved.</address>
   </footer>
+  <script src="../js/all.js"></script>
 </body>
 </html>
 
