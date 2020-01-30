@@ -15,11 +15,13 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" />
 	<link rel="stylesheet" href="css/common.css" />
 	<link rel="stylesheet" href="css/home.css" />
+	<link rel="stylesheet" type="text/css" href="css/animation.css">
 </head>
 <body>
 <header>
 	<nav id="menu">
 		<ul>
+			<li><a href="index.php"><i class="fas fa-home"></i> <span>Home</span></a></li>
 			<li><a href="register/register.php"><i class="fas fa-user"></i> <span>Register</span></a></li>
 		<?php
 			//menu();
@@ -37,7 +39,7 @@
 </header>
 
 
-	<div class="introduce">
+	<div class="introduce element js-animation">
 		<ul>
 			<li><img src="img/ddd.jpg" alt="Food picture showed up here." /></li>
 			<li><img src="img/eee.jpg" alt="Food picture showed up here." /></li>
@@ -47,7 +49,7 @@
 	</div><!-- /.introduce -->
 
 
-<div id="button">
+<div id="button" class="element js-animation">
 	<ul>
 		<li><a href="" class="target">1</a></li>
 		<li><a href="">2</a></li>
@@ -55,9 +57,9 @@
 	</ul>
 </div><!-- /#button -->
 
-<div class="description">
+<div class="description element js-animation">
 	<img id="title" src="img/logo_d_w.png" alt="sample" />
-	<div id="des_txt">
+	<div id="des_txt" class="element js-animation">
 		<h1>Buonoとは</h1><br>
 		<p>食べ物に着目した新感覚のSNS</p>
 		<p>従来のサービスとは異なり、ユーザー自ら発信するスタイルを実現しました。
@@ -75,5 +77,6 @@
 <script src="js/all.js"></script>
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/slide.js"></script>
+<script src="js/sc_ani.js"></script>
 </body>
 </html>
