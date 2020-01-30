@@ -1,9 +1,20 @@
 <?php
-    include_once("../common/function.php");
+    include_once("../common/db_connect.php");
     $pdo = db_connect();
     //データの受け取り
     $post_id = intval($_GET['post_id']);
-    $content = strval($_GET['content']);
+
+    //contentをpost_idを使ってDBから受け取る
+    try {
+      $pdo = db_connect();
+      $sql = "SELECT post.content FROM post WHERE post_id=? ";
+      $sql = $pdo->prepare($sql);
+      $sql->execute(array($post_id));
+      $result_data = $sql->fetchAll(PDO::FETCH_ASSOC);
+      $content = $result_data[0]['content'];
+    } catch (PDOException $e) {
+      exit('データベース接続失敗。'.$e->getMessage());
+    }
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -25,7 +36,7 @@
         <li><a href="../register/register.php"><i class="fas fa-user"></i>Register</a></li>
         <li><a href="../login/login.php"><i class="fas fa-sign-in-alt"></i>Login</a></li>
         <li><a href="profile_edit.php"><i class="fas fa-user-cog"></i>Profile</a></li>
-        <li><a href="../p/post_list.php"><i class="far fa-comments"></i>Post</a></li>
+        <li><a href="../post/post_list.php"><i class="far fa-comments"></i>Post</a></li>
       </ul>
     </nav>
   </header>

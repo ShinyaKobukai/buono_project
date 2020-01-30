@@ -1,9 +1,19 @@
 <?php 
   include_once("../common/db_connect.php");
-  $pdo = db_connect();
   //データの受け取り
   $post_id = intval($_GET['post_id']);
-  $content = strval($_GET['content']);
+
+  //contentをpost_idを使ってDBから受け取る
+  try {
+      $pdo = db_connect();
+      $sql = "SELECT post.content FROM post WHERE post_id=? ";
+      $sql = $pdo->prepare($sql);
+      $sql->execute(array($post_id));
+      $result_data = $sql->fetchAll(PDO::FETCH_ASSOC);
+      $content = $result_data[0]['content'];
+    } catch (PDOException $e) {
+      exit('データベース接続失敗。'.$e->getMessage());
+    }
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +33,7 @@
     <nav id="menu">
       <ul>
         <li><a href="../index.php"><i class="fas fa-home"></i>Home</a></li>
-        <li><a href="../php/post_list.php"><i class="far fa-comments"></i>Post</a></li>
+        <li><a href="../post/post_list.php"><i class="far fa-comments"></i>Post</a></li>
       </ul>
     </nav>
   </header>
@@ -31,13 +41,12 @@
   <div id="regi_info" class="element js-animation">
     <h1>削除しますか？</h1>
     <form name="form1" method="post">
-      <label for="box"></label>
-      <p><?php echo $content;?></p>
+      <label for="box"><?php echo $content ?></label>
       <input type="hidden" name="post_id" value="<?php echo $post_id;?>">
       <div id="ans">
         <?php
           echo '<div id="yesref"><a href="content_delete.php?post_id='.$post_id.'">はい</a></div>';
-          echo '<div id="noref"><a href="../php/post_list.php">いいえ</a></div>';
+          echo '<div id="noref"><a href="../post/post_list.php">いいえ</a></div>';
         ?>
       </div>
     </form>
