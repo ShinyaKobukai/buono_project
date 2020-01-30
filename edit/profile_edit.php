@@ -31,6 +31,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/common.css" type="text/css">
     <link rel="stylesheet" href="../css/register.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../css/animation.css">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
     <title>Buono -プロフィール編集画面-</title>
 </head>
@@ -45,7 +46,7 @@
     </nav>
   </header>
 <main>
-  <div class="regi_info">
+  <div id="regi_info" class="element js-animation">
     <h1>プロフィール設定</h1>
     <form action="profile_proce.php" name="form1" method="post" enctype=multipart/form-data>
       <label for="box">新しいユーザー名</label>
@@ -73,10 +74,10 @@
     }
   })();
   </script>
-
 </main>
   <footer>
     <address>&copy;2019 buono All Rights Reserved.</address>
   </footer>
+  <script src="../js/sc_ani.js"></script>
 </body>
 </html>

@@ -13,6 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/common.css" type="text/css">
     <link rel="stylesheet" href="../css/register.css" type="text/css">
+    <link rel="stylesheet" href="../css/animation.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
     <title>Buono -投稿編集-</title>
 </head>
@@ -29,20 +30,21 @@
     </nav>
   </header>
 <main>
-  <div class="regi_info">
+  <div id="regi_info" class="element js-animation">
     <h1>レビュー編集</h1>
     <form name="form1" method="post">
       <label for="box">review</label>
       <textarea name="post_edit" cols="15" rows="4" id="post_edit" placeholder=""><?php echo $content;?></textarea>
       <p><input type="hidden" name="post_id" value="<?php echo $post_id;?>"></p>
-      <input type="button" value="編集する" onclick="clickBtn();" />           
+      <input type="submit" value="編集する" id="btn">           
     </form>
   </div>
-      <script type="text/javascript">
+    <script type="text/javascript">
+      (function(){
         var post_id = "<?php echo $post_id; ?>";
         var post_edit = "<?php echo $content; ?>";
         console.log(post_id);
-        var clickBtn = function(){
+        document.querySelector('#btn').onclick = function(){
           var post_edit = document.form1.post_edit.value;
           document.getElementById('post_edit').textContent = post_edit;
           if (!post_edit.match(/\S/g)){
@@ -54,14 +56,17 @@
               location.href = pram;
             }
             console.log(post_edit);
+            return false;
           }
         }
-      </script>
+      })();
+    </script>
 </main>
   <footer>
     <address>&copy;2019 buono All Rights Reserved.</address>
   </footer>
   <script src="../js/all.js"></script>
+  <script src="../js/sc_ani.js"></script>
 </body>
 </html>
 
