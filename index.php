@@ -74,7 +74,7 @@
 </div><!-- /.description -->
 
 <footer>
-	<address>&copy; 2019 buono All Rights Reserved.</address>
+	<address>&copy; 2020 team:Null All Rights Reserved.</address>
 </footer>
 
 <script src="js/all.js"></script>
