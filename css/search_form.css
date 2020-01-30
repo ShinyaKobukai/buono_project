@@ -14,9 +14,9 @@
 	top: 200px;
 	bottom:auto;
 	border: solid 5px #fff;
-	border-radius: 5%;
+	border-radius: 10px;
 	box-shadow:0 0 3px #333;
-	background-color: #fff;
+	background-color: #fff9a4;
 	text-align: center;
 	z-index: 2001;
 }
