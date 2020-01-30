@@ -20,6 +20,9 @@
 <body>
 <header>
 	<nav id="menu">
+		<!-- 01/30 ayato メニューに画像を追加するコード -->
+		<img src="img/title_b.png" alt="Title picture showed up here." id="title_pic">
+		<!-- ↑ -->
 		<ul>
 			<li><a href="index.php"><i class="fas fa-home"></i> <span>Home</span></a></li>
 			<li><a href="register/register.php"><i class="fas fa-user"></i> <span>Register</span></a></li>
