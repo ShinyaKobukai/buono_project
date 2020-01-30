@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/common.css" type="text/css">
     <link rel="stylesheet" href="../css/register.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/animation.css">
     <title>Buono -ログイン-</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
     </nav>
   </header>
 <main>
-  <div class="regi_info">
+  <div id="regi_info" class="element js-animation">
     <h1>ログイン</h1>
     <form action="login_judge.php" method="POST" id = "form">
       <label for="box">ユーザーID</label>
@@ -34,6 +35,7 @@
     <address>&copy;2019 buono All Rights Reserved.</address>
   </footer>
   <script src="../js/all.js"></script>
+  <script src="../js/sc_ani.js"></script>
 </body>
 </html>
 
