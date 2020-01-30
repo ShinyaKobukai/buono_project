@@ -25,7 +25,7 @@
         <li><a href="../register/register.php"><i class="fas fa-user"></i>Register</a></li>
         <li><a href="../login/login.php"><i class="fas fa-sign-in-alt"></i>Login</a></li>
         <li><a href="profile_edit.php"><i class="fas fa-user-cog"></i>Profile</a></li>
-        <li><a href="../php/post_list.php"><i class="far fa-comments"></i>Post</a></li>
+        <li><a href="../p/post_list.php"><i class="far fa-comments"></i>Post</a></li>
       </ul>
     </nav>
   </header>
