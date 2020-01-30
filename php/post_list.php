@@ -65,6 +65,7 @@
     <link rel="stylesheet" href="../css/search_form.css" type="text/css">
     <link rel="stylesheet" href="../css/post_form.css" type="text/css">
     <link rel="stylesheet" href="../css/post_list.css" type="text/css">
+    <link rel="stylesheet" href="../css/animation.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
     <title>Buono -投稿一覧-</title>
 </head>
@@ -187,7 +188,7 @@
 </div>
 <div id="black-layer"></div>
 <div id="flex-area">
-  <div id="post_form">
+  <div id="post_form" class="element js-animation">
     <div id ="menu_name">
       <p id="top_form">投稿</p>
       <form action="post_write.php" enctype="multipart/form-data" method="post">
@@ -222,69 +223,21 @@
 <!-- ↓追加 -->
 <div id="flex-area-s">
   <div id="search_form">
-    <p id="top_form_ms">検索</p>
-    <form action="../search/search_result.php" name="form1" method="post">
-      <input type="text" name="food_name" placeholder="料理名かタグを入力してください" size="24" maxlength="20" id="food_name">
-      <input type="submit" value="検索" id="btn">
-    </form>
+    <div class="element js-animation">
+      <p id="top_form_ms">検索</p>
+      <form action="../search/search_result.php" name="form1" method="post">
+        <input type="text" name="food_name" placeholder="料理名かタグを入力してください" size="24" maxlength="20" id="food_name">
+        <input type="submit" value="検索" id="btn">
+      </form>
+    </div>
   </div>
-  <script>
-  //記述の問題のアラート
-  (function(){
-    document.querySelector('#btn').onclick = function(){
-      var food_name = document.form1.food_name.value;
-      document.querySelector('#food_name').textContent = food_name;
-      if (!food_name.match(/\S/g)){
-        alert('記述に問題があります。訂正してください。');
-        return false;
-      } 
-    }
-  })();
-  //アニメーション
-    (function(){
-      function showElementAnimation() {
-        var element = document.getElementsByClassName('js-animation');
-        if(!element) return; // 要素がなかったら処理をキャンセル      
-        var showTiming = window.innerHeight > 768 ? 200 : 40; // 要素が出てくるタイミングはここで調整
-        var scrollY = window.pageYOffset;
-        var windowH = window.innerHeight;
-      for(var i=0;i<element.length;i++) { 
-        var elemClientRect = element[i].getBoundingClientRect(); var elemY = scrollY + elemClientRect.top; if(scrollY + windowH - showTiming > elemY) {
-          element[i].classList.add('is-show');
-        } else if(scrollY + windowH < elemY) {
-          // 上にスクロールして再度非表示にする場合はこちらを記述
-          element[i].classList.remove('is-show');
-        }
-      }
-    }
-    showElementAnimation();
-    window.addEventListener('scroll', showElementAnimation);
-  })();
-  //削除時のアラート
-  // (function(){
-  //   let cdel = null;
-  //   cdel = document.querySelectorAll('.del');
-  //   for(let i=0; i<cdel.length; i++){
-  //     cdel[i].onclick = function(){
-  //     var del_bt = confirm('削除しますか？');
-  //     del_url = "";
-  //       if (del_bt && del_url != null) {
-  //         location.href=del_url; 
-  //       } else {
-  //         return false;
-  //       }
-  //     }
-  //   }
-  // })();
-
-
-  </script>
 </div>
-<!-- 　↑　 -->
   <footer>
     <address>&copy;2019 buono All Rights Reserved.</address>
   </footer>
   <script src="../js/jquery-2.1.4.min.js"></script>
+  <script src="../js/sc_ani.js"></script>
+  <script src="../js/search_alert.js"></script>
   <script src="../js/post-form.js"></script>
   <script src="../js/all.js"></script>
   <script src="../js/search-form.js"></script>
