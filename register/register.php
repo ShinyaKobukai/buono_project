@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/common.css" type="text/css">
     <link rel="stylesheet" href="../css/register.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../css/animation.css">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
     <title>Buono -新規登録-</title>
 </head>
@@ -25,14 +26,14 @@
                 <li><a href="../login/logout.php"><i class="fas fa-sign-in-alt"></i> <span>Logout</span></a></li>
                 ';
         }else{
-          echo '<li><a href=../login/login.php"><i class="fas fa-sign-in-alt"></i> <span>Login</span></a></li>';
+          echo '<li><a href="../login/login.php"><i class="fas fa-sign-in-alt"></i> <span>Login</span></a></li>';
         }
       ?>
       </ul>
     </nav>
   </header>
 <main>
-  <div class="regi_info">
+  <div id="regi_info" class="element js-animation">
     <h1>新規登録</h1>
     <form action="register_proce.php" method="POST" id = "form">
       <label for="box">ユーザーID</label>
@@ -51,5 +52,6 @@
     <address>&copy;2019 buono All Rights Reserved.</address>
   </footer>
   <script src="../js/all.js"></script>
+  <script src="../js/sc_ani.js"></script>
 </body>
 </html>
