@@ -151,7 +151,6 @@
           if ($login_user == $row['user_id']) {
             $del_url = '../edit/check_delete.php?post_id='.$row['post_id'];
             $edit_url = '../edit/content_edit.php?post_id='.$row['post_id'];
-            var_dump($row['post_id']);
             echo 
               '<div class="button">
                 <div class="edit">
