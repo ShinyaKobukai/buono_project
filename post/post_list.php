@@ -78,6 +78,7 @@
         <li><a id="search_button" href="#"><i class="fas fa-search"></i>Search</a></li>
         <li><a href="../edit/profile_edit.php"><i class="fas fa-user-cog"></i>Profile</a></li>
         <li><a href="../login/logout.php"><i class="fas fa-sign-in-alt"></i><span>Logout</span></a></li>
+        <li><a href="../chat/message_list.php"><i class="fas fa-envelope"></i><span>Message</span></a></li>
       </ul>
     </nav>
   </header>
