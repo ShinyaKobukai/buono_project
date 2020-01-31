@@ -62,11 +62,11 @@
   <header>
     <nav id="menu">
       <ul>
-        <li><a href="../home.html"><i class="fas fa-home"></i>Home</a></li>
-        <li><a href="../login/register.html"><i class="fas fa-user"></i>Legister</a></li>
-        <li><a href="../login/login.html"><i class="fas fa-sign-in-alt"></i>Login</a></li>
-        <li><a href="../edit/profile_edit.html"><i class="fas fa-user-cog"></i>Edit</a></li>
-        <li><a href="../post_list.php"><i class="far fa-comments"></i>Posts</a></li>
+        <li><a href="../index.php"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="../register/register.php"><i class="fas fa-user"></i>Register</a></li>
+        <li><a href="../login/login.php"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+        <li><a href="../edit/profile_edit.php"><i class="fas fa-user-cog"></i>Profile</a></li>
+        <li><a href="../post/post_list.php"><i class="far fa-comments"></i>Post</a></li>
       </ul>
     </nav>
   </header>
