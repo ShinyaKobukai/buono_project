@@ -139,11 +139,14 @@
           <div class="place"><i class="fas fa-location-arrow"></i>　<?php echo $row['place'] ?></div>
           <div class="date"><i class="fas fa-clock"></i>　<?php echo $row['post_date'] ?></div>
         </div>
-        <?php 
+       <?php 
           //タグが存在した場合の処理
-          if (isset($row['tag_name'])) {
-            echo '<div class="hash"><i class="fas fa-tag"></i>　' .$row['tag_name']. '</div>';
-          } 
+          if (isset($row['tag_name'])) :?>
+          <div class="hash"><i class="fas fa-tag"></i>
+            <?php echo $row['tag_name'];?>
+          </div>
+        <?php endif;?>
+        <?php
           //ログインの中ユーザーのみ削除と編集のボタンを出す
           if ($login_user == $row['user_id']) {
             $del_url = '../edit/check_delete.php?post_id='.$row['post_id'];
