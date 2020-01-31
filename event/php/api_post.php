@@ -65,6 +65,7 @@ function POST_chat(){
 		$header_token = explode('Bearer ',$ALLHD["authorization"])[1];
 	}
 	*/
+	$ctext = trim(htmlspecialchars($REQUEST["uinput"]));
 	$pdo = db_connect();
 	$sql = "
 	INSERT INTO
@@ -75,7 +76,7 @@ function POST_chat(){
 	$sth->execute(
 		array(
 			':rid'=>intval($REQUEST["rid"]),
-			':ctext'=>$REQUEST["uinput"],
+			':ctext'=>$ctext,
 			':cmade'=>base64_decode($REQUEST["cmade"])
 		)
 	);
