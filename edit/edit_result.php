@@ -17,7 +17,7 @@
   } catch (PDOException $e) {
     exit('データベース接続失敗。'.$e->getMessage());
   }
-  header("Location: ../php/post_list.php");
+  header("Location: ../post/post_list.php");
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +38,7 @@
         <p>レビュー：<?php echo $content ?></p>
       </div>
 </body>
-  <p><a href="../php/post_list.php">投稿一覧へ</a></p>
+  <p><a href="../post/post_list.php">投稿一覧へ</a></p>
 </html>
 
 <!DOCTYPE html>
@@ -57,8 +57,8 @@
     <nav id="menu">
       <ul>
         <li><a href="../index.php"><i class="fas fa-home"></i>Home</a></li>
-        <li><a href="../register/register.html"><i class="fas fa-user"></i>Register</a></li>
-        <li><a href="../login/logout.php"><i class="fas fa-sign-in-alt"></i>Rogout</a></li>
+        <li><a href="../register/register.php"><i class="fas fa-user"></i>Register</a></li>
+        <li><a href="../login/logout.php"><i class="fas fa-sign-in-alt"></i>Logout</a></li>
       </ul>
     </nav>
   </header>
