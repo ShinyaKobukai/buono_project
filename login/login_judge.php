@@ -24,7 +24,7 @@
       $pdo = null;
 
       if($result[0] != 0){
-        header('Location: ../php/post_list.php');
+        header('Location: ../post/post_list.php');
         exit;
       } else {
         // 読み込んだときに自動的にポップアップの内容が書いたformを送信する
