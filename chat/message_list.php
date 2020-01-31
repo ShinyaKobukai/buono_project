@@ -62,6 +62,6 @@
 	<?php
 		endwhile;
 	?>	
-	<a href="../post_list.php">メイン画面に戻る</a>
+	<a href="../post/post_list.php">Postに戻る</a>
 </body>
 </html>
