@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded',e=>{
 		<div class="name ${cssown}">${user_id}</div>
 		
 		<div class="info ${cssown}">
-			<div class="${cssown}">
+			<div class="${cssown} element js-animation">
 				<p>${message}</p>
 			</div><!-- /.message -->
 		</div><!-- /.info -->
