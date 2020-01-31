@@ -1,0 +1,55 @@
+	.room_talk{
+		position:relative;
+		padding:20px;
+		border-radius:5px;
+		border:1px dotted #ccc;
+	}
+	.room_talk p{
+		margin:10px auto;
+		padding:10px;
+		border:1px solid #eee;
+		border-radius:5px;
+		background-color:#ffc;
+	}
+	.colon::after{
+		content:"　：　";
+	}
+	.flex{
+		display:flex;
+		justify-content:center;
+		align-items:center;
+	}
+	.flex input[type="submit"]{
+		display:block;
+		margin:10px;
+		padding:10px;
+		border:1px solid #eee;
+		border-radius:5px;
+		width:160px;
+		color:#333;
+		background-color:#ccc;
+		text-align:center;
+		cursor:pointer;
+	}
+	.flex input[type="submit"]:hover{
+		border:1px solid #333;
+		color:#fff;
+		background-color:#333;
+	}
+	.room_back{
+		display:block;
+		margin:20px auto;
+		padding:10px;
+		border:1px solid #eee;
+		border-radius:5px;
+		width:200px;
+		text-align:center;
+		text-decoration:none;
+		background-color: #eee;
+	}
+
+	.room_back:hover{
+		border:1px solid #333;
+		color:#fff;
+		background-color:#333;
+	}
