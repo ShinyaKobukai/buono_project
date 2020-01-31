@@ -11,6 +11,7 @@ $_SESSION['correct'] = base64_encode($_SESSION['user_id']);
 	<title>チャットルーム</title>
 	<link rel="stylesheet" href="../css/user_chat.css" />
 	<link rel="stylesheet" href="../css/chat1.css" />
+	<link rel="stylesheet" href="../../css/animation.css" />
 </head>
 <body data-owner="<?php echo $_SESSION["correct"];?>">
 <div id="wrapper">
@@ -34,5 +35,6 @@ $_SESSION['correct'] = base64_encode($_SESSION['user_id']);
 </div><!-- /#wrapper -->
 <script src="../js/all.js"></script>
 <script src="../js/spa_chat.js"></script>
+<script src="../../js/sc_ani.js"></script>
 </body>
 </html>
