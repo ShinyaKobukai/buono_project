@@ -145,10 +145,14 @@
           } 
           //ログインの中ユーザーのみ削除と編集のボタンを出す
           if ($login_user == $row['user_id']) {
-            $del_url = '../edit/check_delete.php?content='.$row['content'].'&amp;post_id='.$row['post_id'];
+            $del_url = '../edit/check_delete.php?post_id='.$row['post_id'];
+            $edit_url = '../edit/content_edit.php?post_id='.$row['post_id'];
+            var_dump($row['post_id']);
             echo 
               '<div class="button">
-                <div class="edit"><a href="/buono/edit/content_edit.php?content='.$row['content'].'&amp;post_id='.$row['post_id'].'" class="btn-flat-border">編集</a></div>
+                <div class="edit">
+                  <a href="'.$edit_url.'">編集</a>
+                  </div>
                 <div class="delete"><a href="'.$del_url.'" class="del" id="del">削除</a></div>
               </div>';
           }else{
