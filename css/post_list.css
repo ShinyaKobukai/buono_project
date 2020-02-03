@@ -179,6 +179,10 @@ input {
 	display: flex;
 }
 
+address{
+	font-style: normal;
+}
+
 /* PC用レイアウト */
 @media screen and ( min-width : 769px ) {
 	.icon{
@@ -245,4 +249,8 @@ input {
   opacity: 1;
   visibility: visible;
   transform: translateY(0px);
+}
+
+address{
+	font-style: normal;
 }
