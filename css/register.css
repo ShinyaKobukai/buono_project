@@ -38,3 +38,7 @@ input {
 #noref{
 	padding: 10px;
 }
+
+address{
+	font-style: normal;
+}
