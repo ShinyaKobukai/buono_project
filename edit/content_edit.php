@@ -62,8 +62,10 @@
             alert('記述に問題があります。訂正してください。');
           } else {
             post_edit.trim();
+            // 半角#を全角＃に変換
+            var sharp = post_edit.replace( /#/g , "＃" ) ;
             if (window.confirm("編集を完了しますか？\n"+post_edit)) { 
-              var pram = "/buono/edit/edit_result.php?post_id="+post_id+"&post_edit="+post_edit;
+              var pram = "/buono/edit/edit_result.php?post_id="+post_id+"&post_edit="+sharp;
               location.href = pram;
             }
             console.log(post_edit);
