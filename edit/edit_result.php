@@ -1,8 +1,13 @@
 <?php
   include_once("../common/db_connect.php");
+  include_once("../common/value.php");
   $pdo = db_connect();
   $post_id = intval($_GET['post_id']);
-  $content = trim(htmlspecialchars($_GET["post_edit"]));
+  $post_edit = trim(htmlspecialchars($_GET["post_edit"]));
+  
+  // 全角＃を半角#に戻す
+  $content = str_replace('＃', '#', $post_edit);
+
   try {
     $updata_stmt = $pdo->prepare(
       "UPDATE post SET content=:content WHERE post_id=:post_id "
@@ -14,66 +19,41 @@
       "SELECT user_name,post.post_id,food_name,content,data,post_date FROM post LEFT OUTER JOIN user ON user.user_id = post.user_id LEFT OUTER JOIN photo_data ON post.post_id = photo_data.post_id ORDER BY post_date DESC ;"
     );
     $user_stmt->execute();
+
+    var_dump($content);
+    if(strpos($content,'#') !== false){
+      if(strpos($content,' ') !== false){
+        $tag = explode(" ",$content);
+
+        $tag_read = $pdo->prepare("
+          DELETE post_tag, tag FROM post_tag left join tag on post_tag.tag_id = tag.tag_id where post_tag.post_id = :post_id
+        ");
+        $tag_read->bindParam(':post_id',$post_id,PDO::PARAM_STR);
+        $tag_read->execute();
+
+        for ($tag_num=0; $tag_num < count($tag); $tag_num++) {
+          $tag_str = trim($tag[$tag_num]);
+
+          if(strpos($tag_str,'#') !== false){
+            $stmt = $pdo->prepare("
+              INSERT INTO tag (tag_name) VALUES (:tag)
+            ");
+            $stmt->execute(array(':tag'=>$tag_str));
+            $tag_id = $pdo->lastInsertId('tag_id');
+            $tag_stmt = $pdo->prepare("
+              INSERT INTO post_tag (post_id,tag_id) VALUES (:post_id,:tag_id);
+            ");
+            $tag_stmt->bindParam(':post_id',$post_id,PDO::PARAM_STR);
+            $tag_stmt->bindParam(':tag_id',$tag_id,PDO::PARAM_STR);
+            $tag_stmt->execute();
+          }
+        }
+      }//--if
+    }//--if
+
+
   } catch (PDOException $e) {
     exit('データベース接続失敗。'.$e->getMessage());
   }
   header("Location: ../post/post_list.php");
 ?>
-
-<!DOCTYPE html>
-<html lang="jp">
-<head>
-  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-  <title>buono</title>
-  <link rel="stylesheet" type="text/css" href="../css/buono.css">
-</head>
-<body>
-  <header>
-    <img src="../image/logo.png" alt="">
-  </header>
-      <div id="name">
-        <p>編集が完了しました</font></p>
-      </div>
-      <div id="post_content">
-        <p>レビュー：<?php echo $content ?></p>
-      </div>
-</body>
-  <p><a href="../post/post_list.php">投稿一覧へ</a></p>
-</html>
-
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/common.css" type="text/css">
-    <link rel="stylesheet" href="../css/register.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
-    <title>Buono -投稿編集-</title>
-</head>
-<body>
-  <header>
-    <nav id="menu">
-      <ul>
-        <li><a href="../index.php"><i class="fas fa-home"></i>Home</a></li>
-        <li><a href="../register/register.php"><i class="fas fa-user"></i>Register</a></li>
-        <li><a href="../login/logout.php"><i class="fas fa-sign-in-alt"></i>Logout</a></li>
-      </ul>
-    </nav>
-  </header>
-<main>
-  <div class="regi_info">
-    <h1>レビュー編集</h1>
-    <form action="edit_result.php" method="post">
-      <label for="box">編集が完了しました</label></br>
-      <p>レビュー：<?php echo $content ?></p>
-    </form>
-  </div>
-</main>
-  <footer>
-    <address>&copy;2019 buono All Rights Reserved.</address>
-  </footer>
-  <script src="../js/all.js"></script>
-</body>
-</html>
