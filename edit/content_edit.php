@@ -32,11 +32,11 @@
   <header>
     <nav id="menu">
       <ul>
-        <li><a href="../index.php"><i class="fas fa-home"></i>Home</a></li>
-        <li><a href="../register/register.php"><i class="fas fa-user"></i>Register</a></li>
-        <li><a href="../login/login.php"><i class="fas fa-sign-in-alt"></i>Login</a></li>
-        <li><a href="profile_edit.php"><i class="fas fa-user-cog"></i>Profile</a></li>
-        <li><a href="../post/post_list.php"><i class="far fa-comments"></i>Post</a></li>
+        <li><a href="../index.php"><i class="fas fa-home"></i><span>Home</span></a></li>
+        <li><a href="../register/register.php"><i class="fas fa-user"></i><span>Register</span></a></li>
+        <li><a href="../login/login.php"><i class="fas fa-sign-in-alt"></i><span>Login</span></a></li>
+        <li><a href="profile_edit.php"><i class="fas fa-user-cog"></i><span>Profile</span></a></li>
+        <li><a href="../post/post_list.php"><i class="far fa-comments"></i><span>Post</span></a></li>
       </ul>
     </nav>
   </header>
