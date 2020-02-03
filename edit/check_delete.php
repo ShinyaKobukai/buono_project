@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="../css/common.css" type="text/css">
     <link rel="stylesheet" href="../css/register.css" type="text/css">
     <link rel="stylesheet" href="../css/animation.css" type="text/css">
+    <link rel="stylesheet" href="../css/footer_patch.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
     <title>Buono -投稿編集-</title>
 </head>

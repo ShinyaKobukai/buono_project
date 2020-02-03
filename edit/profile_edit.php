@@ -31,6 +31,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/common.css" type="text/css">
     <link rel="stylesheet" href="../css/register.css" type="text/css">
+    <link rel="stylesheet" href="../css/footer_patch.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="../css/animation.css">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
     <title>Buono -プロフィール編集画面-</title>
@@ -52,7 +53,9 @@
       <label for="box">新しいユーザー名</label>
       <input type="text" name="user_name" value="<?php echo $user_name ?>" id="user_name"/>
       <label for="box">新しいユーザーアイコン</label>
+      </br>
       <input name="user_icon" type="file" id="user_icon">
+      </br>
       <input type="submit" value="変更" id="btn" />    
     </form>
   </div>
