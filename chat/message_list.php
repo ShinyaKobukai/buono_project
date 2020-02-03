@@ -63,6 +63,7 @@
   </header>
 	</header>
 	<h1><?php echo /*$room_name*/'メッセージ' ?></h1>
+	<div id="space">   </div>
 	<a class="room_back" href="create.php">トークルームを作成</a>
 <?php while ($row = $stmt->fetch()): ?>
 	<form action="" method="POST" class="room_talk">
