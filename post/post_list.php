@@ -69,9 +69,9 @@
   <header>
     <nav id="menu">
       <ul>
-        <li><a href="../index.php"><i class="fas fa-home"></i>Home</a></li>
-        <li><a id="search_button" href="#"><i class="fas fa-search"></i>Search</a></li>
-        <li><a href="../edit/profile_edit.php"><i class="fas fa-user-cog"></i>Profile</a></li>
+        <li><a href="../index.php"><i class="fas fa-home"></i><span>Home</span></a></li>
+        <li><a id="search_button" href="#"><i class="fas fa-search"></i><span>Search</span></a></li>
+        <li><a href="../edit/profile_edit.php"><i class="fas fa-user-cog"></i><span>Profile</span></a></li>
         <li><a href="../login/logout.php"><i class="fas fa-sign-in-alt"></i><span>Logout</span></a></li>
         <li><a href="../chat/message_list.php"><i class="fas fa-envelope"></i><span>Message</span></a></li>
       </ul>
