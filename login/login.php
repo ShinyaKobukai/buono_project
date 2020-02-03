@@ -7,16 +7,16 @@
     <link rel="icon" href="img/favicon.ico">
     <link rel="stylesheet" href="../css/common.css" type="text/css">
     <link rel="stylesheet" href="../css/register.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/animation.css">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
     <title>Buono -ログイン-</title>
 </head>
 <body>
   <header>
     <nav id="menu">
       <ul>
-        <li><a href="../index.php"><i class="fas fa-home"></i>Home</a></li>
-        <li><a href="../register/register.php"><i class="fas fa-user"></i>Register</a></li>
+        <li><a href="../index.php"><i class="fas fa-home"></i><span>Home</a></span></li>
+        <li><a href="../register/register.php"><i class="fas fa-user"></i><span>Register</span></a></li>
       </ul>
     </nav>
   </header>
