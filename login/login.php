@@ -7,6 +7,7 @@
     <link rel="icon" href="img/favicon.ico">
     <link rel="stylesheet" href="../css/common.css" type="text/css">
     <link rel="stylesheet" href="../css/register.css" type="text/css">
+    <link rel="stylesheet" href="../css/footer_patch.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="../css/animation.css">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
     <title>Buono -ログイン-</title>
@@ -28,7 +29,8 @@
       <input type="text" name="user_id" value="" id="box" required/>
       <label for="password">パスワード</label>
       <input type="password" name="password" value="" id="password" required />
-      <input type="submit" name="login"  value="ログイン"  required />
+      </br>
+      <input type="submit" name="login" value="ログイン"  required />
     </form>
   </div>
 </main>
