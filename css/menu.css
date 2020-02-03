@@ -3,31 +3,35 @@
 #menu ul {
 	display:flex;
 	justify-content:center;
-	margin:0 auto;
 	list-style: none;
 }
+
+#menu{
+	text-size:1.3rem;
+	padding: 10px;
+}
+
 #menu li {
-	margin:0 1%;
 	width:30%;
 	max-width:200px;
+	height: 30%;
 }
 #menu li:fist-of-type {
 	margin-left:1%;
 }
 #menu a {
 	box-sizing:border-box;
-	display:block;
-	margin:5px;
-	padding:5px 0;
-	border-radius:5px;
+	margin: 0 auto; 
 	text-align:center;
-	font-size:13px;
+	font-size:15px;
 	color:#06f;
 	background-color:#ffffff;
 	text-decoration:none;
 	box-shadow:0 0 3px #333;
 	transition:all .3s ease 0s;
+	color: #ffff
 }
+
 #menu a svg {
 	display:block;
 	margin:0 auto;
@@ -37,24 +41,11 @@
 	display:block;
 }
 #menu a:hover{
-	color:#f00;
+	color:#000;
 	box-shadow:0 0 3px #f30;
 }
 
 #title {
 	width: 30%;
 	height: 30%;
-}
-
-/* 01/31　ayato メニューの画像に関するcss */
-#title_pic {
-	float: left;
-	margin: 10px auto;
-	width:30%;
-}
-/* ↑ */
-
-#title_pic {
-	width:15%;
-	height:15%;
 }
