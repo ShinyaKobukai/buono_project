@@ -19,15 +19,15 @@
   <header>
     <nav id="menu">
       <ul>
-        <li><a href="../index.php"><i class="fas fa-home"></i> <span>Home</span></a></li>
+        <li><a href="../index.php"><i class="fas fa-home"></i><span>Home</span></a></li>
       <?php
         //menu();
         if(!empty($_SESSION['user_id'])){
-          echo '<li><a href="../post/post_list.php"><i class="far fa-comments"></i>Post</a></li>
-                <li><a href="../login/logout.php"><i class="fas fa-sign-in-alt"></i> <span>Logout</span></a></li>
+          echo '<li><a href="../post/post_list.php"><i class="far fa-comments"></i><span>Post</span></a></li>
+                <li><a href="../login/logout.php"><i class="fas fa-sign-in-alt"></i><span>Logout</span></a></li>
                 ';
         }else{
-          echo '<li><a href="../login/login.php"><i class="fas fa-sign-in-alt"></i> <span>Login</span></a></li>';
+          echo '<li><a href="../login/login.php"><i class="fas fa-sign-in-alt"></i><span>Login</span></a></li>';
         }
       ?>
       </ul>
