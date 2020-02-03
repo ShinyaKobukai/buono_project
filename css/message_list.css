@@ -1,3 +1,8 @@
+	#space{
+		height: 20px;
+		width: 100%;
+	}
+
 	.room_talk{
 		position:relative;
 		padding:20px;

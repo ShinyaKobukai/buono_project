@@ -37,7 +37,7 @@ body {
 #des_img img {
 	max-width:60%;
 	max-height: 100%;
-	padding: 30px;
+	padding: 50px;
 }
 
 /*footer{
@@ -160,8 +160,10 @@ address{
 	}
 
 	#des_img{
-		width: 300px;
-		height: 300px;
+		width: 30%;
+		height: 30%;
+		justify-content: center;
+		vertical-align: middle
 	}
 
 	.description>div {
