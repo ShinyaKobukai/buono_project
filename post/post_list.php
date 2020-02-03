@@ -24,15 +24,10 @@
         post.food_name,
         post.content,
         post.place,
-        post.post_date,
-        tag.tag_id,
-        tag.tag_name
+        post.post_date
         FROM 
         user,
-        post
-        left outer join
-        (post_tag join tag on tag.tag_id = post_tag.tag_id)
-        on post.post_id = post_tag.post_id
+        post 
         WHERE 
         post.user_id = user.user_id
         ORDER BY 
@@ -140,12 +135,27 @@
           <div class="date"><i class="fas fa-clock"></i>　<?php echo $row['post_date'] ?></div>
         </div>
        <?php 
+       try{
+          $tag_sql = $pdo->prepare("SELECT post.post_id, tag.tag_id, tag.tag_name FROM tag LEFT OUTER JOIN(post JOIN post_tag on post.post_id = post_tag.post_id) on post_tag.tag_id = tag.tag_id WHERE :post = post.post_id AND post.post_id = post_tag.post_id");
+          $tag_sql->bindParam(':post',$post,PDO::PARAM_INT);
+          $tag_sql->execute();
+        }catch(PDOException $e){
+          echo "エラー：" . $e->getMessage();
+        }
+
+        $tag_names = $tag_sql->fetchAll(PDO::FETCH_ASSOC);
           //タグが存在した場合の処理
-          if (isset($row['tag_name'])) :?>
-          <div class="hash"><i class="fas fa-tag"></i>
-            <?php echo $row['tag_name'];?>
+        if(count($tag_names)):?>
+           <?php if ($post == $tag_names[0]['post_id']):?>
+            <div class="hash"><i class="fas fa-tag"></i>
+          <?php
+              for($tag_num=0; $tag_num<count($tag_names); $tag_num++){
+                echo $tag_names[$tag_num]['tag_name'];
+              }
+          ?>
           </div>
         <?php endif;?>
+      <?php endif;?>
         <?php
           //ログインの中ユーザーのみ削除と編集のボタンを出す
           if ($login_user == $row['user_id']) {
