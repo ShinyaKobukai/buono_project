@@ -45,6 +45,7 @@
       <input type="password" name="password" value="" id="password" />
       <label for="re_pass">パスワード(再入力)</label>
       <input type="password" name="re_pass" value="" id="re_pass"/>
+      </br>
       <input type="submit" name="register"  value="新規登録"  />
     </form>
   </div>
