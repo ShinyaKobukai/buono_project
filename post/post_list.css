@@ -1,0 +1,256 @@
+h1 {
+	border-bottom: double 6px #FF8000;
+}
+
+body {
+	background-color: #fbca4d;
+}
+
+label {
+	display: block;
+	margin-top: 20px;
+}
+
+input {
+	/*border-radius: 1.5rem;*/
+}
+
+.icon{
+	display: flex;
+    align-items: center;
+}
+
+.icon_img{
+	width: 100px;
+	height: 80px;
+	position: left;
+}
+
+.icon_name{
+	font-size: 30px;
+	position: center;
+	left: 30px;
+}
+
+.name img{
+	padding:10px;
+	border-radius: 100rem;
+	width: 60px;
+ 	height: 60px;
+ 	object-fit: cover;
+}
+
+#content_photo img {
+	max-width: 200px;
+	max-height: 100px;
+	width: 200px;
+  	object-fit: cover;
+}
+
+#Post_content{
+	/*background-color: #FFFFF9;*/
+	border-radius: 0.5rem;
+}
+
+#TimeLine{
+	border-radius: 5px;
+	margin-left: 2.5rem;
+	margin-right: 2.5rem;
+	margin-top: 2rem;
+	flex-direction: row;
+	background-color: #FFFF;
+}
+
+
+#Post_content{
+	/*background-color: #FFFFF9;*/
+	border-radius: 0.5rem;
+}
+
+.btn_space{
+	max-height:32px;
+}
+
+.content_photo{
+	background-color: #FFFF;
+	border-radius: 0.5rem;
+	width: 100%;
+	height: auto;
+}
+
+#photo {
+	/*border-radius: 40px;*/
+}
+
+#result{
+	padding: 10px;
+	background-color: #FFFF;
+	text-align: center;
+}
+
+.info{
+	/*display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;*/
+	min-height: 30px;
+	height: 100%;
+	width: 100%;
+}
+
+.name{
+	background-color: #FFFF;
+	border-radius: 0.5rem;
+	margin-top: 1rem;/*
+	align-content: stretch;*/
+	align-items: baseline;
+	flex-direction: row;
+}
+
+.food_name{
+	/*grid-col: 1/2;
+	grid-row: 1/3;*/
+	padding: 10px;
+	border-radius: 0.5rem;
+	max-width: 100%;
+	min-height: 15px;
+	height: 100%;
+}
+
+.hash{
+	border-radius: 0.5rem;
+	padding: 10px;
+}
+
+.button{
+	display: flex;
+	border-radius: 5px;
+	cursor: pointer;
+	justify-content: center;
+}
+
+.content{
+	padding: 10px;
+	border-radius: 0.5rem;
+	max-width: 100%;
+	min-height: 15px;
+	height: 100%;
+}
+
+.place{
+	/*grid-col: 2/3;
+	grid-row: 1/2;*/
+	padding: 10px;
+	border-radius: 0.5rem;
+	max-width: 100%;
+	min-height: 15px;
+	height: 100%;
+}
+
+.date{
+	/*grid-col: 2/3;
+	grid-row: 2/3;*/
+	padding: 10px;
+	border-radius: 0.5rem;
+	max-width: 100%;
+	height: 100%;
+}
+
+.edit {
+	width: 150px;
+	height: auto;
+	float: left;
+	border-radius: 0 0 0 20px;
+	text-align: center;
+	background-color: #fff;
+}
+
+.delete {
+	width: 150px;
+	height: auto;
+	float: right;
+	border-radius: 0 0 20px 0;
+	text-align: center;
+	background-color: #fff;
+}
+
+#page_num{
+	justify-content: center;
+	padding: 3px;
+	display: flex;
+}
+
+address{
+	font-style: normal;
+}
+
+/* PC用レイアウト */
+@media screen and ( min-width : 769px ) {
+	.icon{
+		font-size: 30px;
+	}
+}
+
+/*投稿フォームのCSS*/
+
+#food_space{
+	display: flex;
+	align-items: center;
+}
+
+#food_icon{
+	padding: 10px;
+	font-size: 20px;
+	width: 25px;
+}
+
+#food_text{
+	width: 250px;
+}
+
+#content_space{
+	display: flex;
+	align-items: center;
+}
+
+
+#content_icon{
+	padding: 10px;
+	font-size: 20px;
+	width: 25px;
+}
+
+#content_text{
+	width: 250px;
+}
+
+#place_space{
+	display: flex;
+	align-items: center;
+}
+
+#place_icon{
+	padding: 10px;
+	font-size: 20px;
+	width: 25px;
+}
+
+#place_text{
+	width: 250px;
+}
+
+.js-animation {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(40px);
+  transition: all 1s;
+}
+
+.js-animation.is-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+address{
+	font-style: normal;
+}
