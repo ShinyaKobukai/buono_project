@@ -21,17 +21,14 @@
 <body>
 <header>
 	<nav id="menu">
-		<!-- 01/30 ayato メニューに画像を追加するコード -->
-		<img src="img/title_b.png" alt="Title picture showed up here." id="title_pic">
-		<!-- ↑ -->
 		<ul>
-			<li><a href="index.php"><i class="fas fa-home"></i> <span>Home</span></a></li>
+			<li><a href="index.php"><i class="fas fa-home"></i><span>Home</span></a></li>
 			<li><a href="register/register.php"><i class="fas fa-user"></i> <span>Register</span></a></li>
 		<?php
 			//menu();
 			if(!empty($_SESSION['user_id'])){
-				echo '<li><a href="/buono/post/post_list.php"><i class="far fa-comments"></i>Post</a></li>
-							<li><a href="edit/profile_edit.php"><i class="fas fa-user-cog"></i>Profile</a></li>
+				echo '<li><a href="/buono/post/post_list.php"><i class="far fa-comments"></i><span>Post</span></a></li>
+							<li><a href="edit/profile_edit.php"><i class="fas fa-user-cog"></i><span>Profile</span></a></li>
 							<li><a href="login/logout.php"><i class="fas fa-sign-in-alt"></i> <span>Logout</span></a></li>
 							';
 			}else{
@@ -62,8 +59,8 @@
 </div><!-- /#button -->
 
 <div class="description element js-animation">
-	<img id="title" src="img/logo_d_w.png" alt="sample" />
-	<div id="des_txt" class="element js-animation">
+	<div id="des_img"><img src="img/title_b.png" alt="sample"></div>
+	<div id="des_txt" class="">
 		<h1>Buonoとは</h1><br>
 		<p>食べ物に着目した新感覚のSNS</p>
 		<p>従来のサービスとは異なり、ユーザー自ら発信するスタイルを実現しました。
@@ -74,13 +71,13 @@
 	</div>
 </div><!-- /.description -->
 
-<footer>
-	<address>&copy; 2020 team:Null All Rights Reserved.</address>
-</footer>
-
 <script src="js/all.js"></script>
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/slide.js"></script>
 <script src="js/sc_ani.js"></script>
 </body>
+<footer>
+	<address>&copy; 2020 team:Null All Rights Reserved.</address>
+</footer>
+</div>
 </html>
