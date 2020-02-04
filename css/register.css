@@ -11,6 +11,11 @@ label {
 	margin-top: 20px;
 }
 
+form{
+	padding: 10px;
+	word-wrap: break-word;
+}
+
 input {
 	/*border-radius: 1.5px;*/
 }
@@ -26,17 +31,32 @@ input {
 }
 
 #ans{
+	padding-top:20px; 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-#yesref{
+#yesref a{
 	padding: 10px;
+	color: #05F;
+	transition:all .3s ease 0s;
+	text-decoration: none;
 }
 
-#noref{
+#yesref a:hover{
+	color: red;
+}
+
+#noref a{
 	padding: 10px;
+	color: #05F;
+	transition:all .3s ease 0s;
+	text-decoration: none;
+}
+
+#noref a:hover{
+	color: red;
 }
 
 address{

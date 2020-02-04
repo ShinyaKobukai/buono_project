@@ -104,6 +104,7 @@ input {
 	align-content: stretch;*/
 	align-items: baseline;
 	flex-direction: row;
+	word-wrap: break-word;
 }
 
 .food_name{
@@ -114,19 +115,15 @@ input {
 	max-width: 100%;
 	min-height: 15px;
 	height: 100%;
+	word-wrap: break-word;
 }
 
 .hash{
 	border-radius: 0.5rem;
 	padding: 10px;
+	word-wrap: break-word;
 }
 
-.button{
-	display: flex;
-	border-radius: 5px;
-	cursor: pointer;
-	justify-content: center;
-}
 
 .content{
 	padding: 10px;
@@ -134,6 +131,7 @@ input {
 	max-width: 100%;
 	min-height: 15px;
 	height: 100%;
+	word-wrap: break-word;
 }
 
 .place{
@@ -144,6 +142,7 @@ input {
 	max-width: 100%;
 	min-height: 15px;
 	height: 100%;
+	word-wrap: break-word;
 }
 
 .date{
@@ -155,6 +154,14 @@ input {
 	height: 100%;
 }
 
+.button{
+	display: flex;
+	border-radius: 5px;
+	cursor: pointer;
+	justify-content: center;
+	padding-bottom: 10px;
+}
+
 .edit {
 	width: 150px;
 	height: auto;
@@ -162,6 +169,16 @@ input {
 	border-radius: 0 0 0 20px;
 	text-align: center;
 	background-color: #fff;
+}
+
+.edit a{
+	color: #000;
+	transition:all .3s ease 0s;
+	text-decoration: none;
+}
+
+.edit a:hover{
+	color:red;
 }
 
 .delete {
@@ -173,16 +190,41 @@ input {
 	background-color: #fff;
 }
 
+.delete a{
+	color: #000;
+	transition:all .3s ease 0s;
+	text-decoration: none;
+}
+
+.delete a:hover{
+	color:red;
+}
+
 #page_num{
 	justify-content: center;
 	padding: 3px;
 	display: flex;
 }
 
+.message{
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.message a{
+	color: #000;
+	transition:all .3s ease 0s;
+	text-decoration: none;
+}
+
+.message a:hover{
+	color:red;
+}
+
 address{
 	font-style: normal;
 }
-
+/*/*/*/*/*/*
 /* PC用レイアウト */
 @media screen and ( min-width : 769px ) {
 	.icon{
@@ -192,6 +234,7 @@ address{
 
 /*投稿フォームのCSS*/
 
+/*
 #food_space{
 	display: flex;
 	align-items: center;
@@ -250,7 +293,7 @@ address{
   visibility: visible;
   transform: translateY(0px);
 }
-
+*/
 address{
 	font-style: normal;
 }

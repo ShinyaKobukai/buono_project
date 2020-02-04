@@ -15,12 +15,13 @@ button{
 	right: 0;
 	position: fixed;
 	text-align: center;
+	transition:all .3s ease 0s;
 }
 
 button:hover{
 	background-color: #fff;
 	border-color: #59b1eb;
-	color: #59b1eb;
+	color: blue;
 }
 
 button > img{
