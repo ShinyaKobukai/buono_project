@@ -55,6 +55,7 @@
     <link rel="stylesheet" href="../css/post_list.css" type="text/css">
     <link rel="stylesheet" href="../css/post_form.css" type="text/css">
     <link rel="stylesheet" href="../css/search_form.css" type="text/css">
+    <link rel="stylesheet" href="../css/animation.css" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap">
 	<title>Buono:検索結果</title>
 </head>
@@ -62,27 +63,27 @@
   <header>
     <nav id="menu">
       <ul>
-        <li><a href="../index.php"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="../index.php"><i class="fas fa-home"></i><span>Home</span></a></li>
       <?php 
         if (isset($_SESSION['user_id'])) {
           echo '
-          <li><a href="../edit/profile_edit.php"><i class="fas fa-user-cog"></i>Edit</a></li>
-          <li><a href="../login/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+          <li><a href="../edit/profile_edit.php"><i class="fas fa-user-cog"></i><span>Edit</span></a></li>
+          <li><a href="../login/logout.php"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a></li>
           ';
         }elseif (!isset($_SESSION['user_id'])) {
           echo '
-          <li><a href="../register/register.php"><i class="fas fa-user"></i>Register</a></li>
-          <li><a href="../login/login.php"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+          <li><a href="../register/register.php"><i class="fas fa-user"></i><span>Register</span></a></li>
+          <li><a href="../login/login.php"><i class="fas fa-sign-in-alt"></i><span>Login</span></a></li>
           ';
         }
       ?>
-        <li><a href="../post/post_list.php"><i class="far fa-comments"></i>Post</a></li>
-        <li><a id="search_button" href="#"><i class="fas fa-search"></i>Search</a></li></li>
+        <li><a href="../post/post_list.php"><i class="far fa-comments"></i><span>Post</span></a></li>
+        <li><a id="search_button" href="#"><i class="fas fa-search"></i><span>Search</span></a></li></li>
       </ul>
     </nav>
   </header>
 <main>
-	<div id="result"><i class="fas fa-search"></i>　検索ワード<?php echo "：".$storage; ?></div>
+	<div id="result" class="element js-animation"><i class="fas fa-search"></i>　検索ワード<?php echo "：".$storage; ?></div>
 	</br>
 <?php
 	while ($row = $stmt->fetch()):
@@ -143,10 +144,6 @@
           if (isset($row['tag_name'])) {
             echo '<div class="hash"><i class="fas fa-tag"></i>　' .$row['tag_name']. '</div>';
           } 
-          //ログインの中ユーザーのみ削除と編集のボタンを出す
-           if ($login_user != $row['user_id']) {
-            echo '<div class="message"><a href="../chat/chat_create.php?user_id='.$row['user_id'].'">DM</a></div>';
-          }
         ?>
 			</div>
 		</div>
@@ -227,6 +224,7 @@
 	</footer>
   <script src="../js/jquery-2.1.4.min.js"></script>
   <script src="../js/post-form.js"></script>
+  <script src="../js/sc_ani.js"></script>
   <script src="../js/all.js"></script>
   <script src="../js/search-form.js"></script>
   <script src="../js/photo_rule.js"></script>
