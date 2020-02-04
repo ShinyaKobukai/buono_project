@@ -23,7 +23,7 @@
 	<nav id="menu">
 		<ul>
 			<li><a href="index.php"><i class="fas fa-home"></i><span>Home</span></a></li>
-			<li><a href="register/register.php"><i class="fas fa-user"></i> <span>Register</span></a></li>
+			<li><a href="register/register.php"><i class="fas fa-user-plus"></i></i> <span>Register</span></a></li>
 		<?php
 			//menu();
 			if(!empty($_SESSION['user_id'])){
