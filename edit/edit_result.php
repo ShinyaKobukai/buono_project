@@ -19,19 +19,18 @@
       "SELECT user_name,post.post_id,food_name,content,data,post_date FROM post LEFT OUTER JOIN user ON user.user_id = post.user_id LEFT OUTER JOIN photo_data ON post.post_id = photo_data.post_id ORDER BY post_date DESC ;"
     );
     $user_stmt->execute();
-    
-    // 既存のタグを削除する処理
+
+    var_dump($content);
     $tag_read = $pdo->prepare("
-          DELETE post_tag, tag FROM post_tag left join tag on post_tag.tag_id = tag.tag_id where post_tag.post_id = :post_id
-     ");
+      DELETE post_tag, tag FROM post_tag left join tag on post_tag.tag_id = tag.tag_id where post_tag.post_id = :post_id
+    ");
     $tag_read->bindParam(':post_id',$post_id,PDO::PARAM_STR);
     $tag_read->execute();
-    var_dump($content);
-
-    // 編集した文にタグがあった場合追加する処理
     if(strpos($content,'#') !== false){
       if(strpos($content,' ') !== false){
         $tag = explode(" ",$content);
+
+
         for ($tag_num=0; $tag_num < count($tag); $tag_num++) {
           $tag_str = trim($tag[$tag_num]);
 
