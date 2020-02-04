@@ -70,7 +70,7 @@
     <nav id="menu">
       <ul>
         <li><a href="../index.php"><i class="fas fa-home"></i><span>Home</span></a></li>
-        <li><a id="search_button" href="#"><i class="fas fa-search"></i><span>Search</span></a></li>
+        <li><a id="search_button" href="#!"><i class="fas fa-search"></i><span>Search</span></a></li>
         <li><a href="../edit/profile_edit.php"><i class="fas fa-user-cog"></i><span>Profile</span></a></li>
         <li><a href="../login/logout.php"><i class="fas fa-sign-in-alt"></i><span>Logout</span></a></li>
         <li><a href="../chat/message_list.php"><i class="fas fa-envelope"></i><span>Message</span></a></li>
@@ -147,13 +147,13 @@
           //タグが存在した場合の処理
         if(count($tag_names)):?>
            <?php if ($post == $tag_names[0]['post_id']):?>
-            <div class="hash"><i class="fas fa-tag"></i>
+            <div class="hash"><i class="fas fa-tag"></i>　
           <?php
               for($tag_num=0; $tag_num<count($tag_names); $tag_num++){
                 echo $tag_names[$tag_num]['tag_name'];
               }
           ?>
-          </div>
+            </div>
         <?php endif;?>
       <?php endif;?>
         <?php
@@ -164,12 +164,13 @@
             echo 
               '<div class="button">
                 <div class="edit">
-                  <a href="'.$edit_url.'">編集</a>
+                  <a href="'.$edit_url.'"><i class="fas fa-tools"></i> 編集</a>
                   </div>
-                <div class="delete"><a href="'.$del_url.'" class="del" id="del">削除</a></div>
+                <div class="delete">
+                <a href="'.$del_url.'" class="del" id="del"><i class="fas fa-trash-alt"></i> 削除</a></div>
               </div>';
           }else{
-            echo '<div class="message"><a href="../chat/chat_create.php?user_id='.$row['user_id'].'">DM</a></div>';
+            echo '<div class="message"><a href="../chat/chat_create.php?user_id='.$row['user_id'].'"><i class="fas fa-user-friends"></i>トークルームへ</a></div>';
           }
         ?>
       </div>
@@ -193,7 +194,7 @@
   $max_page = ceil($comments / $num);
   echo '<div id = "page_num">';
   for ($i=1; $i <= $max_page; $i++) { 
-    echo '<a href="../post_list.php?page='. $i .'">'.$i. '</a>&nbsp;';
+    echo '<a href="post_list.php?page='. $i .'">'.$i. '</a>&nbsp;';
   }
   echo '</div>';
 
