@@ -248,10 +248,14 @@
 <div id="flex-area-s">
   <div id="search_form">
     <div class="element js-animation">
-      <p id="top_form_ms">検索</p>
+      <p id="top_form_ms"><i class="fas fa-search"></i>検索　</p>
       <form action="../search/search_result.php" name="form1" method="post">
         <input type="text" name="food_name" placeholder="料理名かタグを入力してください" size="24" maxlength="20" id="food_name">
-        <input type="submit" value="検索" id="btn">
+        <br />
+        <!-- <input type="submit" value="検索" id="btn"> -->
+        <button type="submit" class="btn">
+            検索
+        </button>
       </form>
     </div>
   </div>
