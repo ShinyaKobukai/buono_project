@@ -9,10 +9,14 @@ $_SESSION['correct'] = base64_encode($_SESSION['user_id']);
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 	<title>チャットルーム</title>
+	<link rel="stylesheet" href="../../css/menu.css" type="text/css">
 	<link rel="stylesheet" href="../css/user_chat.css" />
 	<link rel="stylesheet" href="../css/chat1.css" />
 	<link rel="stylesheet" href="../../css/animation.css" />
 	<link rel="stylesheet" href="../../css/common.css" type="text/css">
+  <link rel="stylesheet" href="../../css/search_form.css" type="text/css">
+  <link rel="stylesheet" href="../../css/post_form.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
 </head>
 <body data-owner="<?php echo $_SESSION["correct"];?>">
 <header>
