@@ -9,8 +9,10 @@
 	position: fixed;
 	padding: 5px;
 	margin: auto;
-	width: auto;
-	height: 30%;
+	max-width: 60%;
+	min-width: 50%;
+	max-height: 40%;
+	min-height: 30%;
 	top: 200px;
 	bottom:auto;
 	border: solid 5px #fff;
@@ -20,11 +22,20 @@
 	text-align: center;
 	z-index: 2001;
 }
-#search_form > form > p {
-	margin-top: 30px;
+#food_name{
+	margin-bottom: 1rem;
 }
-#search_form > form > p > input{
-	width: auto;
+#search_form button{
+	padding: 5px;
+	border: 3px;
+	height: 30px;
+	width: 90px;
+	border-radius: 3px;
+	background-color: orange;
+	transition:all .3s ease 0s;
+}
+#search_form button:hover{
+	color: white;
 }
 #top_form_ms {
 	font-size: 24px;
