@@ -15,27 +15,15 @@ $_SESSION['correct'] = base64_encode($_SESSION['user_id']);
 	<link rel="stylesheet" href="../../css/common.css" type="text/css">
 </head>
 <body data-owner="<?php echo $_SESSION["correct"];?>">
-  <header>
-	<nav id="menu">
-		<!-- 01/30 ayato メニューに画像を追加するコード -->
-		<img src="../../img/title_b.png" alt="Title picture showed up here." id="title_pic">
-		<!-- ↑ -->
-		<ul>
-			<li><a href="index.php"><i class="fas fa-home"></i> <span>Home</span></a></li>
-			<li><a href="register/register.php"><i class="fas fa-user"></i> <span>Register</span></a></li>
-		<?php
-			//menu();
-			if(!empty($_SESSION['user_id'])){
-				echo '<li><a href="/buono/post/post_list.php"><i class="far fa-comments"></i>Post</a></li>
-							<li><a href="edit/profile_edit.php"><i class="fas fa-user-cog"></i>Profile</a></li>
-							<li><a href="login/logout.php"><i class="fas fa-sign-in-alt"></i> <span>Logout</span></a></li>
-							';
-			}else{
-				echo '<li><a href="login/login.php"><i class="fas fa-sign-in-alt"></i> <span>Login</span></a></li>';
-			}
-		?>
-		</ul>
-	</nav>
+<header>
+  <nav id="menu">
+    <ul>
+      <li><a href="../../index.php"><i class="fas fa-home"></i><span>Home</span></a></li>
+      <li><a href="../../edit/profile_edit.php"><i class="fas fa-user-cog"></i><span>Profile</span></a></li>
+      <li><a href="../../login/logout.php"><i class="fas fa-sign-in-alt"></i><span>Logout</span></a></li>
+      <li><a href="../../chat/message_list.php"><i class="fas fa-envelope"></i><span>Message</span></a></li>
+    </ul>
+  </nav>
 </header>
 <div id="wrapper">
 	<a href="../../chat/message_list.php">戻る</a>
