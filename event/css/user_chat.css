@@ -53,7 +53,7 @@ footer{
 }
 .uinput{
 	display:flex;
-	margin:.5rem auto;
+	margin: 1rem auto;
 	width:32rem;
 }
 .uinput label{
@@ -66,7 +66,7 @@ footer{
 }
 #uinput{
 	display:block;
-	margin:0 .5rem;
+	margin:.5rem;
 	padding:0;
 	border:.1rem solid #666;
 	border-radius:.5rem;
@@ -76,7 +76,7 @@ footer{
 }
 #uinput+button{
 	display:block;
-	margin:0 .5rem;
+	margin:.5rem;
 	border:.1rem solid #666;
 	border-radius:.5rem;
 	width:8rem;
@@ -85,7 +85,7 @@ footer{
 }
 /*-- custom ui
 --------------------------------------------------*/
-#reset{
+/*#reset{
 	position:absolute;
 	right:.5rem;
 	bottom:.5rem;
@@ -98,7 +98,7 @@ footer{
 	font-size:3rem;
 	text-align:center;
 	cursor:pointer;
-}
+}*/
 .uinput .icon{
 	font-size:3rem;
 }
@@ -171,3 +171,10 @@ svg{
 }
 
 
+img{
+	/*padding:10px;*/
+	border-radius: 100rem;
+	width: 40px;
+ 	height: 40px;
+ 	object-fit: cover;
+}

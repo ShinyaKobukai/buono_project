@@ -71,12 +71,12 @@ document.addEventListener('DOMContentLoaded',e=>{
 
 
 
-
-	document.querySelector("#reset").addEventListener("click",e=>{
-		if(confirm("テーブル履歴を破棄しますか")){
-			localStorage.clear();
-		}
-	},false);
+//リセットボタンの効果を消す
+	// document.querySelector("#reset").addEventListener("click",e=>{
+	// 	if(confirm("テーブル履歴を破棄しますか")){
+	// 		localStorage.clear();
+	// 	}
+	// },false);
 
 	document.querySelector("#submit").addEventListener("click",e=>{
 		let room = document.querySelector("#rid").value;

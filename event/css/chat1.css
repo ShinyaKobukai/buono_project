@@ -31,8 +31,9 @@
   text-align: left;
 }
 .no {
-  margin:0;
+  margin:0 0 0 .5rem;
 }
+
 .no p {
   display: inline-block;
   position: relative; 
@@ -57,7 +58,7 @@
 
 /*以下、③右側の緑コメント*/
 .own {
-  margin: 0;
+  margin: 0 .5rem 0 0;
 }
 .own p {
   display: inline-block;
