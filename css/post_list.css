@@ -224,18 +224,15 @@ input {
 address{
 	font-style: normal;
 }
-/*/*/*/*/*/*
-/* PC用レイアウト */
-@media screen and ( min-width : 769px ) {
-	.icon{
-		font-size: 30px;
-	}
-}
 
 /*投稿フォームのCSS*/
 
-/*
+#post_form{
+	align-items: center;
+}
+
 #food_space{
+	padding-top: 20px;
 	display: flex;
 	align-items: center;
 }
@@ -248,13 +245,17 @@ address{
 
 #food_text{
 	width: 250px;
+	padding-right:10px;
+}
+
+#food_text input{
+	width:100% 
 }
 
 #content_space{
 	display: flex;
 	align-items: center;
 }
-
 
 #content_icon{
 	padding: 10px;
@@ -264,6 +265,11 @@ address{
 
 #content_text{
 	width: 250px;
+	padding-right:10px;
+}
+
+#content_text textarea{
+	width:100% 
 }
 
 #place_space{
@@ -279,6 +285,11 @@ address{
 
 #place_text{
 	width: 250px;
+	padding-right:10px;
+}
+
+#place_text input{
+	width:100% 
 }
 
 .js-animation {
@@ -293,7 +304,7 @@ address{
   visibility: visible;
   transform: translateY(0px);
 }
-*/
+
 address{
 	font-style: normal;
 }

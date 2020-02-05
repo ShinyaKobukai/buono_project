@@ -4,7 +4,7 @@
 	bottom: 80px;
 	z-index: 2000;
 }
-button{
+#post_button button{
 	padding: 5px;
 	margin: 1rem 1rem;
 	width: 50px;
@@ -18,13 +18,18 @@ button{
 	transition:all .3s ease 0s;
 }
 
-button:hover{
+#top_form{
+	padding: 5px;
+	background-color: #fff;
+}
+
+#post_button button:hover{
 	background-color: #fff;
 	border-color: #59b1eb;
 	color: blue;
 }
 
-button > img{
+#post_button button > img{
 	margin:auto;
 	width: 95%;
 	height: 95%;
@@ -54,8 +59,10 @@ button > img{
 	position: fixed;
 	padding: 5px;
 	margin: auto;
+	min-width: 75%;
 	width: auto;
-	height: 75%;
+	max-height: 60%;
+	min-height: 50%;
 	top: 100px;
 	bottom:auto;
 	border: solid 5px #fff;
@@ -83,8 +90,29 @@ button > img{
 	margin-bottom: 10px;
 }
 
-
+#write input{
+	padding: 10px;
+	padding-bottom: 20px;
+}
 
 textarea {
     resize: none;
+}
+
+#post_form button{
+	padding: 5px;
+	border: 3px;
+	height: 30px;
+	width: 90px;
+	border-radius: 3px;
+	background-color: orange;
+	transition:all .3s ease 0s;
+}
+
+#post_form button:hover{
+	color: white;
+}
+
+#input{
+	display: inline-table;
 }
