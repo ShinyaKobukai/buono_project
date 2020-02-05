@@ -209,31 +209,36 @@
 <div id="flex-area">
   <div id="post_form" class="element js-animation">
     <div id ="menu_name">
-      <p id="top_form">投稿</p>
       <form action="post_write.php" enctype="multipart/form-data" method="post">
-          <p><input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id'];?>"></p></br>
-          <div id="food_space">
-            <div id="food_icon"><i class="fas fa-utensils"></i></div>
-            <div id="food_text">
-              <input type="text" name="food_name" placeholder="メニュー名（必須）50文字以内" maxlength="50" size="21">
+          <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id'];?>">
+
+          <div id="input">
+            <div id="food_space">
+              <div id="food_icon"><i class="fas fa-utensils"></i></div>
+              <div id="food_text">
+                <input type="text" name="food_name" placeholder="メニュー名（必須）50文字以内" maxlength="50" size="21">
+              </div>
             </div>
-          </div>
-          <div id ="content_space">  
-            <div id="content_icon"><i class="fas fa-comment"></i></div>
-            <div id="content_text">
-              <textarea name="content" placeholder="感想（必須）500文字以内" rows="4" cols="17" maxlength="500"></textarea>
+            <div id ="content_space">  
+              <div id="content_icon"><i class="fas fa-comment"></i></div>
+              <div id="content_text">
+                <textarea name="content" placeholder="感想（必須）500文字以内" rows="4" cols="17" maxlength="500"></textarea>
+              </div>
             </div>
-          </div>
-          <div id="place_space">
-            <div id="place_icon"><i class="fas fa-location-arrow"></i></div>
-            <div id="place_text">
-              <input type="text" name="place" placeholder="場所（任意）50文字以内" maxlength="50" size="21"> 
+            <div id="place_space">
+              <div id="place_icon"><i class="fas fa-location-arrow"></i></div>
+              <div id="place_text">
+                <input type="text" name="place" placeholder="場所（任意）50文字以内" maxlength="50" size="21"> 
+              </div>
             </div>
           </div>
           <div id ="write">
             <input type="file" name="photo[]" id="photo" multiple="multiple" accept="image/jpeg,*.jpg">
             <input type="hidden" id="base64" name="date" value="">
-            <input type="submit" value="投稿する"></br>
+            </br>
+              <button type="submit" class="button1">
+                <i class="fas fa-edit"></i>投稿
+              </button>
           </div> 
       </form> 
     </div>
