@@ -216,19 +216,19 @@
             <div id="food_space">
               <div id="food_icon"><i class="fas fa-utensils"></i></div>
               <div id="food_text">
-                <input type="text" name="food_name" placeholder="メニュー名（必須）50文字以内" maxlength="50" size="21">
+                <input type="text" name="food_name" placeholder="メニュー名（必須）50文字以内" maxlength="50">
               </div>
             </div>
             <div id ="content_space">  
               <div id="content_icon"><i class="fas fa-comment"></i></div>
               <div id="content_text">
-                <textarea name="content" placeholder="感想（必須）500文字以内" rows="4" cols="17" maxlength="500"></textarea>
+                <textarea name="content" placeholder="感想（必須）500文字以内" rows="4"  maxlength="500"></textarea>
               </div>
             </div>
             <div id="place_space">
               <div id="place_icon"><i class="fas fa-location-arrow"></i></div>
               <div id="place_text">
-                <input type="text" name="place" placeholder="場所（任意）50文字以内" maxlength="50" size="21"> 
+                <input type="text" name="place" placeholder="場所（任意）50文字以内" maxlength="50"> 
               </div>
             </div>
           </div>
