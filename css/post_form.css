@@ -59,7 +59,7 @@
 	position: fixed;
 	padding: 5px;
 	margin: auto;
-	min-width: 75%;
+	max-width: 85%;
 	width: auto;
 	max-height: 60%;
 	min-height: 50%;
