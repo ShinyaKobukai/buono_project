@@ -23,6 +23,7 @@
 	z-index: 2001;
 }
 #food_name{
+	width: 90%;
 	margin-bottom: 1rem;
 }
 #search_form button{
