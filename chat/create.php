@@ -56,25 +56,46 @@ if(isset($_POST['register'])){
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" type="text/css" href="register.css">
-  <title>チャットルーム作成画面</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="../css/common.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="../css/register.css">
+  <link rel="stylesheet" type="text/css" href="../css/animation.css">
+  <link rel="stylesheet" href="../css/footer_patch.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+  <title>チャットルーム作成</title>
 </head>
 <body>
-  <img src="logo.png" alt=""  id="title" />
-  <div id="form_div">
-    <br/>
-    <h1>チャットルーム作成画面</h1>
+  <header>
+    <nav id="menu">
+      <ul>
+        <li><a href="../index.php"><i class="fas fa-home"></i><span>Home</span></a></li>
+        <li><a href="../edit/profile_edit.php"><i class="fas fa-user-cog"></i><span>Profile</span></a></li>
+        <li><a href="../login/logout.php"><i class="fas fa-sign-in-alt"></i><span>Logout</span></a></li>
+        <li><a href="../chat/message_list.php"><i class="fas fa-envelope"></i><span>Message</span></a></li>
+      </ul>
+    </nav>
+  </header>
+<main>
+  <div id="regi_info" class="element js-animation">
+    <h1>新規チャット</h1>
     <form action="" method="POST" id = "form">
-      <?php if($er_msg !== null && $er_msg !==''){echo $er_msg.'<br>';} ?>
-      
-      ルーム名　:　<input type="text" name="room_name" value="" /><br/>
-      <br/>
-      相手のID　:　<input type="text" name="person_id" value="" /><br/>
-      <br/>
-      <input type="submit" name="register"  value="作成"  /><br /><br/>
+      <label for="box">ルーム名</label>
+      <input type="text" name="room_name" value="" required/>
+      <label for="password">相手のID</label>
+      <input type="text" name="person_id" value="" required/>
+      <br /><br />
+      <input type="submit" name="register"  value="作成"  />
+      <br /><br />
       <a href="message_list.php" >戻る</a>
-      <p></p><br/>
     </form>
   </div>
+</main>
+  <footer>
+    <address>&copy;2019 buono All Rights Reserved.</address>
+  </footer>
+  <script src="../js/all.js"></script>
+  <script src="../js/sc_ani.js"></script>
 </body>
 </html>
